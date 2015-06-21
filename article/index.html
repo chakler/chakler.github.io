@@ -1,0 +1,85 @@
+---
+layout: default
+title: Article
+weight: 1
+---
+
+<section class="articles">
+
+  <h1>Articles</h1>
+
+  {% for post in paginator.posts %}
+
+    <article id="{{ post.id }}">
+      
+      <h3>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </h3>
+      <p>
+        {{ post.peek }}
+      </p>
+      <a class="continue" href="{{ post.url }}">Continue reading</a>
+      <div class="info">
+        <time datetime="{{ post.date | date_to_xmlschema }}">
+          {% assign d = post.date | date: "%-d" %} 
+          {% assign m = post.date | date: "%B" %} 
+          {% case d %}
+            {% when '1' or '21' or '31' %}{{ d }}st
+            {% when '2' or '22' %}{{ d }}nd
+            {% when '3' or '23' %}{{ d }}rd
+            {% else %}{{ d }}th
+            {% endcase %}
+          {% case m %}
+            {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
+            {% when 'September' %}Sept.
+            {% else %}{{ post.date | date: "%b" }}.
+            {% endcase %}
+          {{ post.date | date: "%Y" }}
+        </time>
+        <p class="reading-time">
+          
+            {% assign c = post.content | number_of_words %}
+            {% assign ct = c | divided_by: 200 | ceil %}
+
+            {% if ct == 1 %}
+              {{ ct }} minute read
+            {% elsif ct <= 1 %}
+              1 minute read
+            {% else %}
+              {{ ct }} minutes read
+            {% endif %}
+
+        </p>
+      </div>
+
+    </article>
+
+  {% endfor %}
+
+  {% if paginator.total_pages > 1 %}
+  <nav class="pagination">
+    <ul>
+
+      {% if paginator.previous_page %}
+        <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;</a></li>
+      {% endif %}
+
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <li><a class="current">{{ page }}</a></li>
+        {% elsif page == 1 %}
+          <li><a href="{{ "/article" | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+        {% else %}
+          <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+        {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page %}
+        <li class="last"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&rarr;</a></li>
+      {% endif %}
+
+    </ul>
+  </nav>
+  {% endif %}
+
+</section>

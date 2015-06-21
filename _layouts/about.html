@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<section class="about">
+
+  <h1>{{ page.title }}</h1>
+
+  <div class="bio">
+    {{ content }}
+  </div>
+
+  <div class="contactinfo">
+
+    <p>
+      Have something you need to talk about, feel free to contact me by <a href="mailto:{{ site.data.personal.email }}">e-mailing me</a> or <a href="tel:{{ site.data.personal.phone }}">calling me</a>.
+    </p>
+
+    <p>
+    	Remember to follow me on <a href="{{ site.data.personal.twitter }}">Twitter</a>, <a href="{{ site.data.personal.github }}">Github</a>, and <a href="{{ site.data.personal.instagram }}">Instagram</a>.
+    </p>
+  	
+  </div>
+
+</section>
