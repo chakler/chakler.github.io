@@ -9,7 +9,7 @@ weight: 2
 
 Aside from my usual role as a designer, I'm also a front end web developer and a guy working on a lot of weird ideas.
 
-![A picture of me]({{ site.baseurl }}/assets/fullpic.jpg)
+![A picture of me]({{ site.url }}/assets/fullpic.jpg)
 
 I founded The Missing Bulb, a tiny design studio focused on creating design solutions that solve problems. Hire us by dropping by our [website](http://themissingbulb.com).
 
