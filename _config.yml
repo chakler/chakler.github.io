@@ -19,4 +19,4 @@ defaults:
       type: "posts"
     values:
       layout: "article"
-      permalink: /article/:title.html
+      permalink: /article/:title/
