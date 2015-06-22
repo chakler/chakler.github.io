@@ -570,12 +570,20 @@ header {
     -webkit-font-feature-settings: "none";
     -o-font-feature-settings: "none";
     font-feature-settings: "none";
+
+    @include breakpoint(p) {
+      padding: 0;
+    }
   }
 
   ul li, ol li {
     font-size: 22 / 16 * 1em;
     line-height: 36 / 22 * 1em;
     margin-bottom: 9 / 22 * 1em;
+
+    @include breakpoint(p) {
+      list-style-position: inside;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -616,6 +624,68 @@ header {
   }
 }
 
+article .interpost-box {
+  @extend .group;
+}
+
+article .interpost {
+  width: span(1 of 2);
+  display: block;
+  margin: 36 / 22 * 1em 0;
+  font-size: 22 / 16 * 1em;
+  line-height: 36 / 22 * 1em;
+  -webkit-font-variant-ligatures: common-ligatures;
+  font-variant-ligatures: common-ligatures;
+
+  span {
+    display: block;
+    font-weight: 700;
+    text-decoration: none !important;
+
+    @include breakpoint(p) {
+      &:before, &:after {
+        display: none;
+      }
+    }
+  }
+
+  @include breakpoint(p) {
+    @include full;
+
+    &:last-child {
+      margin-top: 0;
+    }
+  }
+
+  &.previous {
+    float: left;
+    text-align: left;
+
+    span:before {
+      content: "\2190";
+      padding-right: 5px;
+    }
+
+    @include breakpoint(p) {
+      text-align: center;
+    }
+  }
+
+  &.next {
+    float: right;
+    text-align: right;
+
+    span:after {
+      content: "\2192";
+      padding-left: 5px;
+    }
+
+    @include breakpoint(p) {
+      text-align: center;
+    }
+  }
+}
+
 nav.pagination {
   width: 100%;
   margin-right: 0;
@@ -649,6 +719,15 @@ footer {
     display: inline-block;
     float: left;
 
+    @include breakpoint(l) {
+      display: block;
+      float: none;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
     @include breakpoint(p) {
       display: block;
       float: none;
@@ -663,6 +742,12 @@ footer {
     display: inline-block;
     text-align: right;
     float: right;
+
+    @include breakpoint(l) {
+      text-align: left;
+      display: block;
+      float: none;
+    }
 
     @include breakpoint(p) {
       text-align: left;

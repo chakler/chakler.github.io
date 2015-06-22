@@ -98,14 +98,14 @@ p {
     background: #bd1111;
     color: white; }
 
-.group, .container, footer {
+.group, .container, article .interpost-box, footer {
   *zoom: 1; }
-  .group:before, .container:before, footer:before, .group:after, .container:after, footer:after {
+  .group:before, .container:before, article .interpost-box:before, footer:before, .group:after, .container:after, article .interpost-box:after, footer:after {
     content: " ";
     /* 1 */
     display: table;
     /* 2 */ }
-  .group:after, .container:after, footer:after {
+  .group:after, .container:after, article .interpost-box:after, footer:after {
     clear: both; }
 
 /*------------ General ------------*/
@@ -411,10 +411,16 @@ body {
   -webkit-font-feature-settings: "none";
   -o-font-feature-settings: "none";
   font-feature-settings: "none"; }
+  @media only screen and (max-width: 479px) {
+    .article blockquote p, .questions blockquote p, .bio blockquote p, .contactinfo blockquote p {
+      padding: 0; } }
 .article ul li, .article ol li, .questions ul li, .questions ol li, .bio ul li, .bio ol li, .contactinfo ul li, .contactinfo ol li {
   font-size: 1.375em;
   line-height: 1.6363636364em;
   margin-bottom: 0.4090909091em; }
+  @media only screen and (max-width: 479px) {
+    .article ul li, .article ol li, .questions ul li, .questions ol li, .bio ul li, .bio ol li, .contactinfo ul li, .contactinfo ol li {
+      list-style-position: inside; } }
   .article ul li:last-child, .article ol li:last-child, .questions ul li:last-child, .questions ol li:last-child, .bio ul li:last-child, .bio ol li:last-child, .contactinfo ul li:last-child, .contactinfo ol li:last-child {
     margin-bottom: 0; }
   .article ul li p, .article ol li p, .questions ul li p, .questions ol li p, .bio ul li p, .bio ol li p, .contactinfo ul li p, .contactinfo ol li p {
@@ -439,6 +445,49 @@ body {
   .article time:before, .questions time:before, .bio time:before, .contactinfo time:before {
     content: "Published on "; }
 
+article .interpost {
+  width: 44.7552447552%;
+  display: block;
+  margin: 1.6363636364em 0;
+  font-size: 1.375em;
+  line-height: 1.6363636364em;
+  -webkit-font-variant-ligatures: common-ligatures;
+  font-variant-ligatures: common-ligatures; }
+  article .interpost span {
+    display: block;
+    font-weight: 700;
+    text-decoration: none !important; }
+    @media only screen and (max-width: 479px) {
+      article .interpost span:before, article .interpost span:after {
+        display: none; } }
+  @media only screen and (max-width: 479px) {
+    article .interpost {
+      clear: both;
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; }
+      article .interpost:last-child {
+        margin-top: 0; } }
+  article .interpost.previous {
+    float: left;
+    text-align: left; }
+    article .interpost.previous span:before {
+      content: "\2190";
+      padding-right: 5px; }
+    @media only screen and (max-width: 479px) {
+      article .interpost.previous {
+        text-align: center; } }
+  article .interpost.next {
+    float: right;
+    text-align: right; }
+    article .interpost.next span:after {
+      content: "\2192";
+      padding-left: 5px; }
+    @media only screen and (max-width: 479px) {
+      article .interpost.next {
+        text-align: center; } }
+
 nav.pagination {
   width: 100%;
   margin-right: 0;
@@ -460,6 +509,12 @@ footer {
   footer .copyright {
     display: inline-block;
     float: left; }
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+      footer .copyright {
+        display: block;
+        float: none; }
+        footer .copyright p {
+          margin-bottom: 0; } }
     @media only screen and (max-width: 479px) {
       footer .copyright {
         display: block;
@@ -470,6 +525,11 @@ footer {
     display: inline-block;
     text-align: right;
     float: right; }
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+      footer .colophon {
+        text-align: left;
+        display: block;
+        float: none; } }
     @media only screen and (max-width: 479px) {
       footer .colophon {
         text-align: left;

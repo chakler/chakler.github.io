@@ -13,7 +13,7 @@
 
       <ul class="menu cf">
         <li>
-          <a href="{{ "/article" | prepend: site.baseurl }}">Article</a>
+          <a href="{{ "/article/" | prepend: site.baseurl }}">Article</a>
         </li>
         {% assign pages = site.pages | sort: "weight" %}
         {% for page in pages %}
