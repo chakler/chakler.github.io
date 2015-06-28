@@ -205,6 +205,7 @@ body {
   font-family: $font;
   font-weight: 400;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
   width: 100%;
   padding: 54 / 16 * 1em 30px;
   color: $frontcolor;

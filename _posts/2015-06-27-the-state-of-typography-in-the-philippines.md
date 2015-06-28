@@ -44,5 +44,5 @@ The only problem is just the mentality of the people. Do they want to learn more
 
 We need a force to encourage people to at least try understanding typography. We need every real type lover to serve as a beacon in spreading the knowledge and creating an awareness. We need to move forward all together in this typography movement. That’s the way to uplift typography and graphic designs in general to a more functional level, and that’s how we should be creating values to good designs.
 
-\* _Special thanks to [Ia Lucero](http://stellify.net/) for proof-reading this article and [Jelvin Base](https://instagram.com/_jelvin/) for creating the amazing calligraphy and lettering piece._
+\* _Special thanks to [Ia Lucero](http://stellify.net/) for proof-reading this article._
 
