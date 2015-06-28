@@ -6,7 +6,7 @@ peek: When I was still a clueless 2nd year college student, we have this class c
 
 ---
 
-> “It’s not just what it looks like and feels like. Design is how it works.”
+> “It’s not just what it looks like and feels like.<br>Design is how it works.”
 
 Yes, this is the famous quote from Steve Jobs, the mastermind behind Apple Inc. But let me ask you one simple question, Do you really know what the statement means?
 

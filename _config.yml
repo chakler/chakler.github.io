@@ -3,12 +3,12 @@ title: Aceler Chua
 email: hi@aclr.co
 description: "Aceler Chua is a multidisciplinary designer based in Manila, Philippines."
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://aclr.co" # the base hostname & protocol for your site
-# url: "http://127.0.0.1:4000/"
+url: "http://aclr.co" # On Github
+# url: "http://127.0.0.1:4000/" # On local
 paginate: 5
 paginate_path: "/article/page:num"
 permalink: /article/:title
-exclude: ["node_modules", "Gruntfile.js", "package.json", "css/dev", "js/dev", "README.md", "CNAME"]
+exclude: ["node_modules", "bower_components", "Gruntfile.js", "package.json", "css/dev", "js/dev", "README.md", "CNAME"]
 
 # Build settings
 markdown: kramdown

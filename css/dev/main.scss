@@ -1,5 +1,5 @@
 @import "_syntax-highlighting.css";
-@import "/Users/acelerchua/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy";
+@import "../../bower_components/susy/sass/susy";
 
 /*------------ Set up ------------*/
 
@@ -79,7 +79,7 @@ $highlight: #f8f8f8;
 $frontcolor: rgba(189,17,17,1);
 $frontcolor-h: lighten($frontcolor, 20%);
 $backcolor: rgba(255,255,255,1);
-$font: "athelas", Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+$font: "calluna", Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
 
 // Valentines Theme
 
@@ -162,6 +162,13 @@ p {
   margin-bottom: 18 / 22 * 1em;
   -webkit-font-variant-ligatures: common-ligatures;
   font-variant-ligatures: common-ligatures;
+}
+
+abbr {
+  border-bottom: 1px dotted $frontcolor;
+  font-variant-caps: all-small-caps;
+  font-feature-settings: "c2sc", "smcp";
+  cursor: help;
 }
 
 .container {

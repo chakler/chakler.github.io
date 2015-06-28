@@ -82,6 +82,12 @@ p {
   -webkit-font-variant-ligatures: common-ligatures;
   font-variant-ligatures: common-ligatures; }
 
+abbr {
+  border-bottom: 1px dotted #bd1111;
+  font-variant-caps: all-small-caps;
+  font-feature-settings: "c2sc", "smcp";
+  cursor: help; }
+
 .container {
   max-width: 100%;
   margin-left: auto;
@@ -111,7 +117,7 @@ p {
 /*------------ General ------------*/
 body {
   font-size: 14px;
-  font-family: "athelas", Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+  font-family: "calluna", Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
   font-weight: 400;
   text-rendering: optimizeLegibility;
   width: 100%;
@@ -254,7 +260,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  font-family: "athelas", Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+  font-family: "calluna", Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
   font-size: 1.375em;
   line-height: 1em;
   color: #bd1111;

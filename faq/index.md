@@ -15,7 +15,7 @@ If this is a open-source project - Sure! Why not? Shoot me an email at hi@aclr.c
 
 If you're representing a charity - Send me an email at hi@aclr.co with some brief details about the project, then we'll talk about it.
 
-None of the above - No. Sorry but I think you'll have to rethink why you're not paying a designer for doing his/her job. Good design is something you'll have to invest in.
+None of the above - No. Sorry but I think you'll have to rethink why you're not paying a designer for doing his/her job. [Good design]({% post_url 2014-09-03-what-is-good-design %}) is something you'll have to invest in.
 
 ## What sports do you play?
 
@@ -23,7 +23,7 @@ When I was still in high school, I play football – the one which you actually 
 
 ## When did you start to learn coding websites?
 
-For HTML and CSS, it was second year college so I was around 20 - 21 I guess? Then a year later I learn some Javascript when I was creating the first version of The Missing Bulb's site.
+For <abbr title="Hypertext Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>, it was second year college so I was around 20 - 21 I guess? Then a year later I learn some Javascript when I was creating the first version of The Missing Bulb's site.
 
 ## What did you use to create this website?
 
