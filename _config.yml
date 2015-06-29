@@ -13,6 +13,9 @@ exclude: ["node_modules", "bower_components", "Gruntfile.js", "package.json", "c
 # Build settings
 markdown: kramdown
 
+gems:
+  - jekyll-sitemap
+
 defaults:
   -
     scope:
