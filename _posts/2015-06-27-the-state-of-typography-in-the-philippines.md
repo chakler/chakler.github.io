@@ -3,6 +3,7 @@
 title: The state of typography in the Philippines
 date: 27th June, 2015
 peek: After Graphika Manila 2014, there’s a sudden uprise of calligraphy and lettering in the Philippines. It’s great to see so many people sharing the same passion and interest. However, we’re still not reaching the end of the big movement. Can we reach it? That’s the question.
+thumbnail: /assets/the-state-of-typography-in-the-philippines/typography.png
 
 ---
 
@@ -14,13 +15,19 @@ It’s not wrong to say calligraphy and lettering are part of typography, but th
 
 ## First
 
+![Calligraphy]({{ "/assets/the-state-of-typography-in-the-philippines/calligraphy.png" | prepend: site.url }})
+
 There is calligraphy, which is an organized form of handwriting with brush or nib. If you think about it, it’s actually the most basic form of typography as it provides the basis for the letterform used in typography. Without letterforms, typography won’t even exist.
 
 ## Second
 
+![Lettering]({{ "/assets/the-state-of-typography-in-the-philippines/lettering.png" | prepend: site.url }})
+
 There is lettering, which is created with multiple strokes to mimic the essence of a letterform. It gives calligraphy another layer of freedom and hence provides the opportunity to create more variations to letterforms.
 
 ## Third
+
+![Typography]({{ "/assets/the-state-of-typography-in-the-philippines/typography.png" | prepend: site.url }})
 
 There is typography, which are rules and techniques that ensure and enhance the functionality of letters and texts. The scope of typography is very wide and diverse, it goes all the way from the proper specs of a glyph to how to properly layout texts. The key questions are always “Is it legible?” or “Does it help to communicate?” In short, typography keeps the letters and texts—or the design in general—away from causing troubles.
 
@@ -44,5 +51,5 @@ The only problem is just the mentality of the people. Do they want to learn more
 
 We need a force to encourage people to at least try understanding typography. We need every real type lover to serve as a beacon in spreading the knowledge and creating an awareness. We need to move forward all together in this typography movement. That’s the way to uplift typography and graphic designs in general to a more functional level, and that’s how we should be creating values to good designs.
 
-\* _Special thanks to [Ia Lucero](http://stellify.net/) for proof-reading this article._
+\* _Special thanks to [Ia Lucero](http://stellify.net/) for proof-reading this article and [Jelvin Base](https://instagram.com/_jelvin/) for creating the calligraphy and lettering example._
 

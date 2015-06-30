@@ -327,7 +327,7 @@ body {
   margin-bottom: 2.25em; }
   .recent-articles article:hover > .info, .articles article:hover > .info {
     opacity: 1; }
-  .recent-articles article:last-of-kind, .articles article:last-of-kind {
+  .recent-articles article:last-of-type, .articles article:last-of-type {
     margin-bottom: 0; }
   .recent-articles article .continue, .articles article .continue {
     font-style: italic;

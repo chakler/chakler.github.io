@@ -4,7 +4,7 @@ email: hi@aclr.co
 description: "Aceler Chua is a multidisciplinary designer based in Manila, Philippines."
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://aclr.co" # On Github
-# url: "http://127.0.0.1:4000/" # On local
+# url: "http://127.0.0.1:4000" # On local
 paginate: 5
 paginate_path: "/article/page:num"
 permalink: /article/:title

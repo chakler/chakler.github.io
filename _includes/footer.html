@@ -51,7 +51,7 @@
     "@context": "http://schema.org",
     "@type": "BlogPosting",
     "headline": "{{ page.title }}",
-    "image": "{% if post.thumbnail %}{{ post.thumbnail }}{% else %}{{ "/assets/ogimage.png" | prepend: site.url }}{% endif %}",
+    "image": "{% if page.thumbnail %}{{ page.thumbnail | prepend: site.url }}{% else %}{{ "/assets/ogimage.png" | prepend: site.url }}{% endif %}",
     "datePublished": "{{ page.date | date_to_xmlschema }}",
     "description": "{{ page.peek }}"
   }
