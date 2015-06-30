@@ -8,7 +8,7 @@ url: "http://aclr.co" # On Github
 paginate: 5
 paginate_path: "/article/page:num"
 permalink: /article/:title
-exclude: ["node_modules", "bower_components", "Gruntfile.js", "package.json", "css/dev", "js/dev", "README.md", "CNAME"]
+exclude: ["node_modules", "bower_components", "Gruntfile.js", "package.json", "bower.json", "css/dev", "js/dev", "readme.md", "CNAME"]
 
 # Build settings
 markdown: kramdown

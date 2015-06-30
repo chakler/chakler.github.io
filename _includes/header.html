@@ -17,15 +17,14 @@
         </li>
         {% assign pages = site.pages | sort: "weight" %}
         {% for page in pages %}
-          {% if page.title %}
-            {% unless page.title == "Article" %}
-            <li>
-              <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-            </li>
-            {% endunless %}
-          {% endif %}
+        {% if page.title %}
+        {% unless page.title == "Article" %}
+        <li>
+          <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        </li>
+        {% endunless %}
+        {% endif %}
         {% endfor %}
-
       </ul>
 
     </nav>
