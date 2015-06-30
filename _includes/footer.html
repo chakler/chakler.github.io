@@ -28,3 +28,32 @@
     ga('send', 'pageview');
 
   </script>
+
+  {% if page.url == "/index.html" %}
+  <script type="application/ld+json">
+  { 
+    "@context" : "http://schema.org",
+    "@type" : "Person",
+    "name" : "Aceler Chua",
+    "url" : "http://aclr.co",
+    "sameAs" : [ "http://twitter.com/chakler",
+        "http://instagram.com/chakler",
+        "http://www.linkedin.com/in/acelerchua",
+        "http://plus.google.com/+AcelerChua"],
+    "image" : "{{ site.url }}/assets/profilepic.jpg"
+  }
+  </script>
+  {% endif %}
+
+  {% if page.peek %}
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{ page.title }}",
+    "image": "{% if post.thumbnail %}{{ post.thumbnail }}{% else %}{{ "/assets/ogimage.png" | prepend: site.url }}{% endif %}",
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "description": "{{ page.peek }}"
+  }
+  </script>
+  {% endif %}
