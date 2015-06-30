@@ -39,7 +39,7 @@ As you can see, calligraphy and lettering are important to the development in ty
 
 I’m not saying this is 100% true, but it certainly looks like people are stuck in the beauty of calligraphy and lettering and their understanding in typography is based duly on those two as well.
 
-Try googling “*Typography workshop Philippines*”, I’m quite sure that calligraphy or lettering workshops are all you will see from the results. There are not even a single company offering typographic consultation service to companies. There is simply not enough understanding to what typography is really about.
+Try googling “*Typography workshop Philippines*”, I’m quite sure that calligraphy or lettering workshops are all you will see from the results. There is not even a single company offering typographic consultation service to companies. There is simply not enough understanding to what typography is really about.
 
 We always hear people say they’re “type nerds“ or “type geeks” but all they care about is what kind of nib they need for writing copperplate or spencerian. That’s because they still haven’t evolved to care about the functionality of type. The styles and the artistic expressions are their primary concern in the so called typography—which is not exactly typography if you think about it.
 
