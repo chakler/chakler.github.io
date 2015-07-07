@@ -31,6 +31,18 @@
 
   {% if page.url == "/index.html" %}
   <script type="application/ld+json">
+  {  
+    "@context" : "http://schema.org",
+     "@type" : "WebSite",
+     "name" : "ACLR.CO",
+     "alternateName" : "Personal website of Aceler Chua",
+     "url" : "http://aclr.co"
+  }
+  </script>
+  {% endif %}
+
+  {% if page.url == "/about/" %}
+  <script type="application/ld+json">
   { 
     "@context" : "http://schema.org",
     "@type" : "Person",

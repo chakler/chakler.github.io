@@ -1,13 +1,13 @@
 # Site settings
 title: Aceler Chua
 email: hi@aclr.co
-description: "Aceler Chua is a multidisciplinary designer based in Manila, Philippines."
+description: "Personal website of Aceler Chua—a multidisciplinary designer creating brand identities, user interfaces & typefaces."
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://aclr.co" # On Github
 # url: "http://127.0.0.1:4000" # On local
 paginate: 5
 paginate_path: "/article/page:num"
-permalink: /article/:title
+permalink: /article/:title/
 exclude: ["node_modules", "bower_components", "Gruntfile.js", "package.json", "bower.json", "css/dev", "js/dev", "readme.md", "CNAME"]
 
 # Build settings
