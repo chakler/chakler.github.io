@@ -380,12 +380,12 @@ body {
     .recent-articles article .info time:before, .articles article .info time:before {
       content: "Published on "; } }
 
-.article h1, .questions h1, .bio h1, .contactinfo h1 {
+.article h1, .questions h1, .bio h1, .contactinfo h1, .events h1 {
   font-weight: 700;
   font-size: 2.875em;
   line-height: 1.1739130435em;
   margin-bottom: 0.3913043478em; }
-.article h2, .questions h2, .bio h2, .contactinfo h2 {
+.article h2, .questions h2, .bio h2, .contactinfo h2, .events h2 {
   font-size: 2em;
   line-height: 1.125em;
   margin-top: 1.125em;
@@ -395,18 +395,28 @@ body {
   -webkit-font-feature-settings: "none";
   -o-font-feature-settings: "none";
   font-feature-settings: "none"; }
-.article a, .questions a, .bio a, .contactinfo a {
+.article h3, .questions h3, .bio h3, .contactinfo h3, .events h3 {
+  font-size: 1.5em;
+  line-height: 1.125em;
+  margin-bottom: 0.75em;
+  font-weight: 400;
+  -moz-font-feature-settings: "none";
+  -ms-font-feature-settings: "none";
+  -webkit-font-feature-settings: "none";
+  -o-font-feature-settings: "none";
+  font-feature-settings: "none"; }
+.article a, .questions a, .bio a, .contactinfo a, .events a {
   text-decoration: underline; }
-.article strong, .questions strong, .bio strong, .contactinfo strong {
+.article strong, .questions strong, .bio strong, .contactinfo strong, .events strong {
   font-weight: 700; }
-.article em, .questions em, .bio em, .contactinfo em {
+.article em, .questions em, .bio em, .contactinfo em, .events em {
   font-style: italic; }
-.article hr, .questions hr, .bio hr, .contactinfo hr {
+.article hr, .questions hr, .bio hr, .contactinfo hr, .events hr {
   border: none;
   border-top: 1px solid #bd1111;
   margin: 2.25em auto;
   width: 37%; }
-.article blockquote p, .questions blockquote p, .bio blockquote p, .contactinfo blockquote p {
+.article blockquote p, .questions blockquote p, .bio blockquote p, .contactinfo blockquote p, .events blockquote p {
   padding: 0 60px;
   text-align: center;
   font-size: 2em;
@@ -419,38 +429,41 @@ body {
   -o-font-feature-settings: "none";
   font-feature-settings: "none"; }
   @media only screen and (max-width: 479px) {
-    .article blockquote p, .questions blockquote p, .bio blockquote p, .contactinfo blockquote p {
+    .article blockquote p, .questions blockquote p, .bio blockquote p, .contactinfo blockquote p, .events blockquote p {
       padding: 0; } }
-.article ul li, .article ol li, .questions ul li, .questions ol li, .bio ul li, .bio ol li, .contactinfo ul li, .contactinfo ol li {
+.article ul li, .article ol li, .questions ul li, .questions ol li, .bio ul li, .bio ol li, .contactinfo ul li, .contactinfo ol li, .events ul li, .events ol li {
   font-size: 1.375em;
   line-height: 1.6363636364em;
   margin-bottom: 0.4090909091em; }
   @media only screen and (max-width: 479px) {
-    .article ul li, .article ol li, .questions ul li, .questions ol li, .bio ul li, .bio ol li, .contactinfo ul li, .contactinfo ol li {
+    .article ul li, .article ol li, .questions ul li, .questions ol li, .bio ul li, .bio ol li, .contactinfo ul li, .contactinfo ol li, .events ul li, .events ol li {
       list-style-position: inside; } }
-  .article ul li:last-child, .article ol li:last-child, .questions ul li:last-child, .questions ol li:last-child, .bio ul li:last-child, .bio ol li:last-child, .contactinfo ul li:last-child, .contactinfo ol li:last-child {
+  .article ul li:last-child, .article ol li:last-child, .questions ul li:last-child, .questions ol li:last-child, .bio ul li:last-child, .bio ol li:last-child, .contactinfo ul li:last-child, .contactinfo ol li:last-child, .events ul li:last-child, .events ol li:last-child {
     margin-bottom: 0; }
-  .article ul li p, .article ol li p, .questions ul li p, .questions ol li p, .bio ul li p, .bio ol li p, .contactinfo ul li p, .contactinfo ol li p {
+  .article ul li p, .article ol li p, .questions ul li p, .questions ol li p, .bio ul li p, .bio ol li p, .contactinfo ul li p, .contactinfo ol li p, .events ul li p, .events ol li p {
     font-size: inherit;
     line-height: inherit;
     margin-bottom: 0.8181818182em; }
-    .article ul li p:last-child, .article ol li p:last-child, .questions ul li p:last-child, .questions ol li p:last-child, .bio ul li p:last-child, .bio ol li p:last-child, .contactinfo ul li p:last-child, .contactinfo ol li p:last-child {
+    .article ul li p:last-child, .article ol li p:last-child, .questions ul li p:last-child, .questions ol li p:last-child, .bio ul li p:last-child, .bio ol li p:last-child, .contactinfo ul li p:last-child, .contactinfo ol li p:last-child, .events ul li p:last-child, .events ol li p:last-child {
       margin-bottom: 1.6363636364em; }
-.article ul, .questions ul, .bio ul, .contactinfo ul {
+.article ul, .questions ul, .bio ul, .contactinfo ul, .events ul {
   margin-top: 2.25em;
   margin-bottom: 2.25em;
   list-style: disc; }
-.article ol, .questions ol, .bio ol, .contactinfo ol {
+.article ol, .questions ol, .bio ol, .contactinfo ol, .events ol {
   margin-top: 2.25em;
   margin-bottom: 2.25em;
   list-style: decimal; }
-.article time, .questions time, .bio time, .contactinfo time {
+.article time, .questions time, .bio time, .contactinfo time, .events time {
   display: block;
   font-size: 1.375em;
   line-height: 1.6363636364em;
   margin-bottom: 1.6363636364em; }
-  .article time:before, .questions time:before, .bio time:before, .contactinfo time:before {
+  .article time:before, .questions time:before, .bio time:before, .contactinfo time:before, .events time:before {
     content: "Published on "; }
+
+.speak li > p {
+  margin-bottom: 0.8181818182em !important; }
 
 article .interpost {
   width: 44.7552447552%;

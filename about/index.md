@@ -11,6 +11,6 @@ Aside from my usual role as a designer, I'm also a front end web developer and a
 
 ![A picture of me]({{ site.url }}/assets/fullpic.jpg)
 
-I founded The Missing Bulb, a tiny design studio focused on creating design solutions that solve problems. Hire us by dropping by our [website](http://themissingbulb.com).
+I founded The Missing Bulb, a tiny design studio focused on solving problems with great design. Hire us by dropping by our [website](http://themissingbulb.com).
 
-I am also the Design Lead of [Philippine Web Designers Organization](http://pwdo.org) since 2013. I’m usually in charge of creating identities and websites for events we organize, like [Form, Function & Class](http://pwdo.org/ffc).
+I am also the Design & Tech Lead of [Philippine Web Designers Organization](http://pwdo.org) since 2013. I’m usually in charge of creating identities and websites for events we organize, like [Form, Function & Class](http://formfunctionclass.com).

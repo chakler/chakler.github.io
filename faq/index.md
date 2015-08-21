@@ -2,7 +2,7 @@
 layout: faq
 title: FAQ
 permalink: /faq/
-weight: 3
+weight: 4
 ---
 
 ## Where do you work?

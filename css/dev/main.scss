@@ -527,7 +527,7 @@ header {
   }
 }
 
-.article, .questions, .bio, .contactinfo {
+.article, .questions, .bio, .contactinfo, .events {
   h1 {
     font-weight: 700;
     font-size: 46 / 16 * 1em;
@@ -540,6 +540,18 @@ header {
     line-height: 36 / 32 * 1em;
     margin-top: 36 / 32 * 1em;
     margin-bottom: 18 / 32 * 1em;
+    -moz-font-feature-settings: "none";
+    -ms-font-feature-settings: "none";
+    -webkit-font-feature-settings: "none";
+    -o-font-feature-settings: "none";
+    font-feature-settings: "none";
+  }
+
+  h3 {
+    font-size: 24 / 16 * 1em;
+    line-height: 27 / 24 * 1em;
+    margin-bottom: 18 / 24 * 1em;
+    font-weight: 400;
     -moz-font-feature-settings: "none";
     -ms-font-feature-settings: "none";
     -webkit-font-feature-settings: "none";
@@ -630,6 +642,10 @@ header {
       content: "Published on ";
     }
   }
+}
+
+.speak li > p {
+  margin-bottom: 18 / 22 * 1em !important;
 }
 
 article .interpost-box {
