@@ -18,14 +18,14 @@ If you're interested in having me to speak at your event, shoot me an [email](ma
 {% if site.data.events.upcoming %}
 ## Upcoming events
 {% for event in site.data.events.upcoming %}
-+	[{{event.name}}]({{event.url}}) — *{{event.date}}*
++	<a href="{{event.url}}" target="_blank">{{event.name}}</a> — *{{event.date}}*
 {% endfor %}
 {% endif %}
 
 {% if site.data.events.past %}
 ## Past events
 {% for event in site.data.events.past %}
-+	[{{event.name}}]({{event.url}}) — *{{event.date}}*<br>
-	Talked about: [{{event.title}}]({{event.talk_url}})
++	<a href="{{event.url}}" target="_blank">{{event.name}}</a> — *{{event.date}}*<br>
+	Talked about: <a href="{{event.talk_url}}" target="_blank">{{event.title}}</a>
 {% endfor %}
 {% endif %}
