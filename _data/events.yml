@@ -1,11 +1,12 @@
 upcoming:
-  - name: Junior Form Function & Class 2015
-    url: http://jffc.tomasinoweb.org/2015/
-    date: September 25-26, 2015
-    title: There's No Such Thing As Web Typography
-    talk_url:
 
 past:
+  - name: Junior Form Function & Class 2015
+    url: http://jffc.tomasinoweb.org/2015/
+    date: September 27, 2015
+    title: The Adaptation of Typography in Web
+    talk_url: http://aclr.co/presentations/the-adaptation-of-typography-in-web/
+
   - name: PWDO Web Design Workshop
     url: http://pwdo.org/workshop
     date: August 29, 2015
