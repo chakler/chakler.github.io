@@ -5,9 +5,9 @@ permalink: /about/
 weight: 2
 ---
 
-## I am Aceler Chua, a multidisciplinary designer who creates brand identities, user interfaces & typefaces.
+## I’m Aceler Chua, a designer who focuses on producing problem-solving solutions in various creative ways.
 
-Aside from my usual role as a designer, I'm also a front end web developer and a guy working on a lot of weird ideas.
+My design approach involves—but not limited to—visual design, human interaction design and typography.
 
 ![A picture of me]({{ site.url }}/assets/fullpic.jpg)
 

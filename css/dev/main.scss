@@ -169,6 +169,11 @@ abbr {
   font-variant-caps: all-small-caps;
   font-feature-settings: "c2sc", "smcp";
   cursor: help;
+
+  h1 > & {
+    font-variant-caps: normal;
+    font-feature-settings: "dlig";
+  }
 }
 
 .container {

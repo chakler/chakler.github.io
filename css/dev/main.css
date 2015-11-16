@@ -87,6 +87,9 @@ abbr {
   font-variant-caps: all-small-caps;
   font-feature-settings: "c2sc", "smcp";
   cursor: help; }
+  h1 > abbr {
+    font-variant-caps: normal;
+    font-feature-settings: "dlig"; }
 
 .container {
   max-width: 100%;

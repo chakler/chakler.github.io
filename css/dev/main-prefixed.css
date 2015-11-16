@@ -87,6 +87,10 @@ abbr {
   -webkit-font-feature-settings: "c2sc", "smcp";
           font-feature-settings: "c2sc", "smcp";
   cursor: help; }
+  h1 > abbr {
+    font-variant-caps: normal;
+    -webkit-font-feature-settings: "dlig";
+            font-feature-settings: "dlig"; }
 
 .container {
   max-width: 100%;
