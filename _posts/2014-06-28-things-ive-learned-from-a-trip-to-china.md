@@ -31,7 +31,7 @@ Also, if you’re developing a site with WordPress, the same problem applies to 
 
 ## The third thing that hit me was the lack of Facebook in China. Yes, even Facebook is blocked in China.
 
-[PWDO](http://pwdo.org "Philippine Web Designers Organization") peep usually discuss stuffs on Facebook, so no Facebook means no communication and no communication means I can’t work on stuffs that I should be working on. I was “virtually uncontactable” during my stay in Xiamen, no Facebook message (you can occasionally receive message though, just receive), no Google Hangouts since no Google. So what’s working in China? Here’s a few of them,
+We [PWDO](http://pwdo.org "Philippine Web Designers Organization"){: .sc} peeps usually discuss stuffs on Facebook, so no Facebook means no communication and no communication means I can’t work on stuffs that I should be working on. I was “virtually uncontactable” during my stay in Xiamen, no Facebook message (you can occasionally receive message though, just receive), no Google Hangouts since no Google. So what’s working in China? Here’s a few of them,
 
 - WeChat
 - Skype

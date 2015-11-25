@@ -55,7 +55,7 @@ $susy: (
 
 $break-mobile: 480px;
 $break-tablet: 768px;
-$break-desktop: 960px;
+$break-desktop: 1140px;
 
 @mixin breakpoint($media) {
   @if $media == p {
@@ -76,10 +76,19 @@ $highlight: #f8f8f8;
 
 // Default Theme
 
-$frontcolor: rgba(189,17,17,1);
+$frontcolor: rgba(28,28,124,1);
 $frontcolor-h: lighten($frontcolor, 20%);
-$backcolor: rgba(255,255,255,1);
+$backcolor: rgba(255,232,217,1);
 $font: "calluna", Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+$boldweight: 400;
+
+// 2015 Theme
+
+// $frontcolor: rgba(189,17,17,1);
+// $frontcolor-h: lighten($frontcolor, 20%);
+// $backcolor: rgba(255,255,255,1);
+// $font: "calluna", Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+// $boldweight: 700;
 
 // Valentines Theme
 
@@ -87,6 +96,7 @@ $font: "calluna", Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqu
 // $frontcolor-h: lighten($frontcolor, 20%);
 // $backcolor: rgba(182,0,45,1);
 // $font: "Didot", Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+// $boldweight: 700;
 
 // Star Wars Theme
 
@@ -94,6 +104,7 @@ $font: "calluna", Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqu
 // $frontcolor-h: lighten($frontcolor, 20%);
 // $backcolor: rgba(6,5,5,1);
 // $font: Futura,"Trebuchet MS",Arial,sans-serif;
+// $boldweight: 700;
 
 /*------------ Plugins ------------*/
 
@@ -124,28 +135,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 46 / 16 * 1em;
-  line-height: 54 / 46 * 1em;
-  margin-bottom: 54 / 46 * 1em;
+  font-size: 1.5 / 1.2 * 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 h2 {
-  font-size: 27 / 16 * 1em;
-  line-height: 36 / 27 * 1em;
-  margin-bottom: 36 / 27 * 1em;
+  font-size: 1 / 1.2 * 1rem;
+  line-height: 1rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
-  font-weight: 700;
-  font-size: 32 / 16 * 1em;
-  line-height: 36 / 32 * 1em;
-  margin-bottom: 18 / 32 * 1em;
+  font-weight: $boldweight !important;
+  font-size: 1.5 / 1.4 * 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 a {
   color: $frontcolor;
   text-decoration: none;
-  transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out, box-shadow 300ms ease-in-out;
 
   &:link, a:visited, a:active {
     color: $frontcolor;
@@ -157,11 +168,12 @@ a {
 }
 
 p {
-  font-size: 22 / 16 * 1em;
-  line-height: 36 / 22 * 1em;
-  margin-bottom: 18 / 22 * 1em;
+  font-size: 1 / 1.6 * 1rem;
+  line-height: 1rem;
+  margin-bottom: 0.75rem;
   -webkit-font-variant-ligatures: common-ligatures;
   font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga", "kern";
 }
 
 abbr {
@@ -174,6 +186,28 @@ abbr {
     font-variant-caps: normal;
     font-feature-settings: "dlig";
   }
+
+  @include breakpoint(l) {
+    border: none;
+  }
+
+  @include breakpoint(p) {
+    border: none;
+  }
+}
+
+.pagetitle {
+  font-weight: $boldweight;
+}
+
+.sc {
+  font-variant-caps: all-small-caps;
+  font-feature-settings: "c2sc", "smcp";
+}
+
+.rsc {
+  font-variant-caps: small-caps;
+  font-feature-settings: "smcp";
 }
 
 .container {
@@ -205,14 +239,32 @@ abbr {
 
 /*------------ General ------------*/
 
+html {
+  font-size: 32px;
+  line-height: 1rem;
+
+  @include breakpoint(t) {
+    font-size: 30px;
+  }
+
+  @include breakpoint(l) {
+    font-size: 25px;
+  }
+
+  @include breakpoint(p) {
+    font-size: 25px;
+  }
+}
+
 body {
-  font-size: 14px;
+  font-size: 1 / 1.6 * 1rem;
+  line-height: 1rem;
   font-family: $font;
   font-weight: 400;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   width: 100%;
-  padding: 54 / 16 * 1em 30px;
+  padding: 2rem 30px;
   color: $frontcolor;
   background: $backcolor;
 
@@ -223,15 +275,15 @@ body {
     
   
   @include breakpoint(l) {
-    padding: 36 / 16 * 1em 20px;
-    font-size: 12px;
+    padding: 1.5rem 20px;
+    // font-size: 12px;
     -webkit-text-size-adjust: none;
   }
     
 
   @include breakpoint(p) {
-    padding: 36 / 16 * 1em 20px;
-    font-size: 12px;
+    padding: 1.5rem 20px;
+    // font-size: 12px;
     -webkit-text-size-adjust: none;
   }
     
@@ -253,7 +305,7 @@ header {
 
   @include breakpoint(p) {
     position: relative;
-    margin-bottom: 36 / 16 * 1em;
+    margin-bottom: 1.5rem;
     @include full;
   }
     
@@ -263,7 +315,7 @@ header {
   @include span(1);
 
   svg {
-    max-height: 72 / 16 * 1em;
+    max-height: 1.75rem;
   }
 
   .logo-path {
@@ -277,10 +329,18 @@ header {
 
   @include breakpoint(l) {
     @include full;
+
+    svg {
+      max-width: 100%;
+    }
   }
     
   @include breakpoint(p) {
     @include full;
+
+    svg {
+      max-height: 2rem;
+    }
   }
     
 }
@@ -291,12 +351,12 @@ header {
   @include span(1);
 
   @include breakpoint(t) {
-    margin-top: 36 / 16 * 1em;
+    margin-top: 1rem;
     @include full;
   }
 
   @include breakpoint(l) {
-    margin-top: 36 / 16 * 1em;
+    margin-top: 1rem;
     @include full;
   }
 
@@ -307,7 +367,7 @@ header {
     float: none;
     top: 54px;
     right: 0;
-    padding: 18 / 16 * 1em 15px;
+    padding: 0.75rem 15px;
     border: 3px $frontcolor solid;
     background: $backcolor;
     z-index: 999;
@@ -343,9 +403,9 @@ header {
 }
 
 #menu li {
-  font-size: 27 / 16 * 1em;
-  line-height: 36 / 27 * 1em;
-  margin-bottom: 18 / 27 * 1em;
+  font-size: 1 / 1.2 * 1rem;
+  line-height: 1rem;
+  margin-bottom: 0.5rem;
 
   &:last-child {
     margin-bottom: 0;
@@ -355,6 +415,10 @@ header {
     color: $frontcolor;
     text-decoration: none;
   }
+
+  a:hover {
+    color: $frontcolor-h;
+  }
 }
 
 #nav-trigger {
@@ -363,13 +427,13 @@ header {
   right: 0;
   top: 0;
   font-family: $font;
-  font-size: 22 / 16 * 1em;
-  line-height: 22 / 22 * 1em;
+  font-size: 1 / 1.4 * 1rem;
+  line-height: 1rem;
   color: $frontcolor; 
   background: transparent;
   border: 2px $frontcolor solid;
   outline: none;
-  padding: 11 / 22 * 1em;
+  padding: 0.2rem 10px;
   appearance: none;
   border-radius: 3px;
 
@@ -413,7 +477,7 @@ header {
     
 
   & > * {
-    margin-bottom: 54 / 16 * 1em;
+    margin-bottom: 2rem;
   }
 
   // .short-bio img{
@@ -426,11 +490,13 @@ header {
 }
 
 .main .profilepic {
-  width: 180 / 16 * 1em;
-  height: 180 / 16 * 1em;
-  margin-bottom: 36 / 16 * 1em;
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 1rem;
   overflow: hidden;
   border-radius: 50%;
+  position: relative;
+  right: 2px;
 
   img {
     width: 100%;
@@ -445,7 +511,7 @@ header {
 
 .recent-articles article, .articles article {
   position: relative;
-  margin-bottom: 36 / 16 * 1em;
+  margin-bottom: 2rem;
 
   &:hover > .info {
     opacity: 1;
@@ -455,10 +521,14 @@ header {
     margin-bottom: 0;
   }
 
+  p {
+    margin-bottom: 0.5rem;
+  }
+
   .continue {
     font-style: italic;
-    font-size: 22 / 16 * 1em;
-    line-height: 36 / 22 * 1em;
+    font-size: 1 / 1.6 * 1rem;
+    line-height: 1rem;
 
     // &:hover:after {
     //   content: "\2192 Go";
@@ -482,13 +552,22 @@ header {
 
     transition: opacity 300ms ease-in-out;
   
+    @include breakpoint(t) {
+      opacity: 1;
+      width: span(1 of 1);
+      position: relative;
+      text-align: left;
+      left: 0;
+      margin-top: 0.5rem;
+    }
+
     @include breakpoint(l) {
       opacity: 1;
       width: span(1 of 1);
       position: relative;
       text-align: left;
       left: 0;
-      margin-top: 18 / 16 * 1em;
+      margin-top: 0.5rem;
     }
 
     @include breakpoint(p) {
@@ -497,29 +576,47 @@ header {
       position: relative;
       text-align: left;
       left: 0;
-      margin-top: 18 / 16 * 1em;
+      margin-top: 0.5rem;
     }
       
   }
 
+  .info time {
+    display: block;
+  }
+
   .info time, .info .reading-time {
-    font-size: 16 / 16 * 1em;
-    line-height: 18 / 16 * 1em;
+    font-size: 0.75 / 1.6 * 1rem;
+    line-height: 0.75rem;
 
-
+    @include breakpoint(t) {
+      display: inline;
+      margin-right: gutter(9);
+      font-size: 0.75 / 1.6 * 1rem;
+      line-height: 0.75rem;
+    }
+    
     @include breakpoint(l) {
       display: inline;
       margin-right: gutter(9);
+      font-size: 0.75 / 1.6 * 1rem;
+      line-height: 0.75rem;
     }
 
     @include breakpoint(p) {
       display: inline;
       margin-right: gutter();
+      font-size: 0.75 / 1.6 * 1rem;
+      line-height: 0.75rem;
     }
       
   }
 
   .info time:before {
+
+    @include breakpoint(t) {
+      content: "Published on ";
+    }
 
     @include breakpoint(l) {
       content: "Published on ";
@@ -534,17 +631,17 @@ header {
 
 .article, .questions, .bio, .contactinfo, .events {
   h1 {
-    font-weight: 700;
-    font-size: 46 / 16 * 1em;
-    line-height: 54 / 46 * 1em;
-    margin-bottom: 18 / 46 * 1em;
+    font-weight: $boldweight !important;
+    font-size: 1.5 / 1.2 * 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 0.25rem;
   }
 
   h2 {
-    font-size: 32 / 16 * 1em;
-    line-height: 36 / 32 * 1em;
-    margin-top: 36 / 32 * 1em;
-    margin-bottom: 18 / 32 * 1em;
+    font-size: 1.5 / 1.4 * 1rem;
+    line-height: 1.5rem;
+    // margin-top: 36 / 32 * 1em;
+    margin-bottom: 0.75rem;
     -moz-font-feature-settings: "none";
     -ms-font-feature-settings: "none";
     -webkit-font-feature-settings: "none";
@@ -552,20 +649,25 @@ header {
     font-feature-settings: "none";
   }
 
-  h3 {
-    font-size: 24 / 16 * 1em;
-    line-height: 27 / 24 * 1em;
-    margin-bottom: 18 / 24 * 1em;
-    font-weight: 400;
-    -moz-font-feature-settings: "none";
-    -ms-font-feature-settings: "none";
-    -webkit-font-feature-settings: "none";
-    -o-font-feature-settings: "none";
-    font-feature-settings: "none";
-  }
+  // h3 {
+  //   font-size: 24 / 16 * 1em;
+  //   line-height: 27 / 24 * 1em;
+  //   margin-bottom: 18 / 24 * 1em;
+  //   font-weight: 400;
+  //   -moz-font-feature-settings: "none";
+  //   -ms-font-feature-settings: "none";
+  //   -webkit-font-feature-settings: "none";
+  //   -o-font-feature-settings: "none";
+  //   font-feature-settings: "none";
+  // }
 
   a {
-    text-decoration: underline;
+    // text-decoration: underline;
+    box-shadow: inset 0 -2px 0 $backcolor, inset 0 -3px 0 $frontcolor;
+
+    &:hover {
+      box-shadow: inset 0 -2px 0 $backcolor, inset 0 -3px 0 $frontcolor-h;
+    }
   }
 
   strong {
@@ -579,17 +681,17 @@ header {
   hr {
     border: none;
     border-top: 1px solid $frontcolor;
-    margin: 36 / 16 * 1em auto;
+    margin: 1rem auto;
     width: 37%;
   }
 
   blockquote p {
     padding: 0 60px;
     text-align: center;
-    font-size: 32 / 16 * 1em;
-    line-height: 36 / 32 * 1em;
-    margin-top: 36 / 32 * 1em;
-    margin-bottom: 36 / 32 * 1em;
+    font-size: 1.5 / 1.4 * 1rem;
+    line-height: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     -moz-font-feature-settings: "none";
     -ms-font-feature-settings: "none";
     -webkit-font-feature-settings: "none";
@@ -602,9 +704,9 @@ header {
   }
 
   ul li, ol li {
-    font-size: 22 / 16 * 1em;
-    line-height: 36 / 22 * 1em;
-    margin-bottom: 9 / 22 * 1em;
+    font-size: 1 / 1.6 * 1rem;
+    line-height: 1rem;
+    margin-bottom: 0.5rem;
 
     @include breakpoint(p) {
       list-style-position: inside;
@@ -617,31 +719,30 @@ header {
     p {
       font-size: inherit;
       line-height: inherit;
-      margin-bottom: 18 / 22 * 1em;
 
       &:last-child {
-        margin-bottom: 36 / 22 * 1em;
+        margin-bottom: 1rem;
       }
     }
   }
 
   ul {
-    margin-top: 36 / 16 * 1em;
-    margin-bottom: 36 / 16 * 1em;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     list-style: disc;
   }
 
   ol {
-    margin-top: 36 / 16 * 1em;
-    margin-bottom: 36 / 16 * 1em;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     list-style: decimal;
   }
 
   time {
     display: block;
-    font-size: 22 / 16 * 1em;
-    line-height: 36 / 22 * 1em;
-    margin-bottom: 36 / 22 * 1em; 
+    font-size: 1 / 1.6 * 1rem;
+    line-height: 1rem;
+    margin-bottom: 1rem; 
 
     &:before {
       content: "Published on ";
@@ -649,8 +750,18 @@ header {
   }
 }
 
+.bigprofile {
+  background: $frontcolor;
+  margin-bottom: 0.75rem;
+
+  img {
+    display: block;
+    mix-blend-mode: luminosity;
+  }
+}
+
 .speak li > p {
-  margin-bottom: 18 / 22 * 1em !important;
+  margin-bottom: 0.75rem !important;
 }
 
 article .interpost-box {
@@ -660,11 +771,12 @@ article .interpost-box {
 article .interpost {
   width: span(1 of 2);
   display: block;
-  margin: 36 / 22 * 1em 0;
-  font-size: 22 / 16 * 1em;
-  line-height: 36 / 22 * 1em;
+  margin: 1.5rem 0;
+  font-size: 1 / 1.4 * 1rem;
+  line-height: 1rem;
   -webkit-font-variant-ligatures: common-ligatures;
   font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga", "kern";
 
   span {
     display: block;

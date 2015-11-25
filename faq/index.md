@@ -34,7 +34,7 @@ In terms of CMS, I'm not sure if it's counted as a CMS but I use Jekyll for gene
 
 ## What are some apps/software that you can't live without?
 
-Probably none. But if I have to choose, those would be Google Chrome, Adobe Illustrator, Adobe Photoshop, Sunrise Calendar, Spotify & Glyphs.
+Probably none. But if I have to choose, those would be Google Chrome, Adobe Illustrator, Adobe Photoshop, Sunrise Calendar([RIP](http://techcrunch.com/2015/10/28/microsoft-to-shut-down-sunrise-mobile-calendar-after-integration-into-outlook-completes/ "Microsoft To Shut Down Sunrise Mobile Calendar After Integration Into Outlook Completes"){: .sc}), Spotify & Glyphs.
 
 ## Do you drive cars in manual transmission?
 
