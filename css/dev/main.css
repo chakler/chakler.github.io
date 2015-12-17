@@ -167,7 +167,7 @@ html {
 body {
   font-size: 0.625rem;
   line-height: 1rem;
-  font-family: "futura-pt", Futura, "Trebuchet MS", Arial, sans-serif;
+  font-family: "news-gothic-std", Futura, "Trebuchet MS", Arial, sans-serif;
   font-weight: 400;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -325,7 +325,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  font-family: "futura-pt", Futura, "Trebuchet MS", Arial, sans-serif;
+  font-family: "news-gothic-std", Futura, "Trebuchet MS", Arial, sans-serif;
   font-size: 0.7142857143rem;
   line-height: 1rem;
   color: #ffc202;
