@@ -7,8 +7,6 @@ weight: 3
 
 ## I enjoy sharing knowledge about visual design, front end web, and typography*.
 
-I've been sharing ideas among groups for a long time and I would love to start sharing in different conferences and events as well. 
-
 If you're interested in having me to speak at your event, shoot me an [email](mailto:hi@aclr.co?subject=We want you to speak at our event!). Give me some information about the event and let me know what topic you have in mind. I'll keep in touch with you and hopefully see you in the near future.
 
 *\* Really, I can do it all day long*
