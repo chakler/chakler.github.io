@@ -10,8 +10,7 @@ weight: 2
 My design approach involves—but not limited to—visual design, human interaction design and typography.
 
 <figure class="bigprofile">
-	<img src="{{ site.url }}/assets/fullpic-bw.jpg" alt="A picture of me">
-	<!-- ![A picture of me]({{ site.url }}/assets/fullpic-bw.jpg) -->
+	<img src="{{ site.url }}/assets/fullpic-bw-2016.png" alt="A picture of me">
 </figure>
 
 I founded The Missing Bulb, a tiny design studio focused on solving problems with great design. Hire us by dropping by our [website](http://themissingbulb.com).
