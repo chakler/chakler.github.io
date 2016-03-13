@@ -353,11 +353,11 @@ abbr {
 
 /*------------ General ------------*/
 html {
-  font-size: 32px;
+  font-size: 28px;
   line-height: 1rem; }
   @media only screen and (min-width: 768px) and (max-width: 1139px) {
     html {
-      font-size: 30px; } }
+      font-size: 28px; } }
   @media only screen and (min-width: 480px) and (max-width: 767px) {
     html {
       font-size: 25px; } }

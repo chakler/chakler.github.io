@@ -7,7 +7,7 @@ weight: 4
 
 ## Where do you work?
 
-I work at my own company called [The Missing Bulb](http://themissingbulb.com). It's a design studio focusing on solving problems with good identity design and interaction.
+I work at my own design studio called [The Missing Bulb](http://themissingbulb.com). We focuses on solving problems with good design and interaction.
 
 ## I have a project in mind, can you do it for free?
 
@@ -19,18 +19,19 @@ None of the above - No. Sorry but I think you'll have to rethink why you're not 
 
 ## What sports do you play?
 
-When I was still in high school, I play football – the one which you actually use your feet to kick the ball. Then I stopped doing sports for a while due to my crazy college schedule. It wasn't until recently that I've learn how to swim, and now I swim almost every week.
+When I was still in high school, I play football—the one which you actually use your feet to kick the ball. Then I stopped doing sports for a while due to my crazy college schedule. It wasn't until recently that I've learn how to swim, <del>and now I</del> I used to swim almost every week.
 
 ## When did you start to learn coding websites?
 
-For <abbr title="Hypertext Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>, it was second year college so I was around 20 - 21 I guess? Then a year later I learn some Javascript when I was creating the first version of The Missing Bulb's site.
+For <abbr title="Hypertext Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>, it was second year college so I was around 20 - 21 I guess? Then a year later I started to learn Javascript by breaking down different jQuery plugins I use. Trust me, it’s the best way to learn.
 
 ## What did you use to create this website?
 
 In terms of hardware, I used my <del>Fusion-Drived Mid-2009 Apple Macbook Pro 15 inch</del> Mid-2014 15 inch Apple Macbook Pro with Retina Display;
 In terms of design, I used Sketch for designing the interface and Adobe Photoshop for editing the photos;
 In terms of writing code, I use Sublime Text 2;
-In terms of CMS, I'm not sure if it's counted as a CMS but I use Jekyll for generating the site.
+In terms of CMS, I'm not sure if it's counted as a CMS but I use Jekyll for generating the site;
+In terms of hosting, this site is hosted on Github so feel free to check my code [here](https://github.com/chakler/chakler.github.io).
 
 ## What are some apps/software that you can't live without?
 

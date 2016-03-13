@@ -10,7 +10,7 @@ peek: When I was still a clueless 2nd year college student, we have this class c
 
 Yes, this is the famous quote from Steve Jobs, the mastermind behind Apple Inc. But let me ask you one simple question, Do you really know what the statement means?
 
-When I was still a clueless 2nd year college student, we have this class called Design Concepts where design concepts were obviously being taught. One lesson I’ve learned from this class is the definition of Art and Design.
+When I was still a clueless 2nd year college student, we have this class called *Design Concepts* where design concepts were obviously being taught. One lesson I’ve learned from this class is the definition of Art and Design.
 
 ***
 
