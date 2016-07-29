@@ -368,7 +368,7 @@ html {
 body {
   font-size: 0.625rem;
   line-height: 1rem;
-  font-family: "calluna", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-family: "cardea", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   font-weight: 400;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -525,7 +525,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  font-family: "calluna", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-family: "cardea", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   font-size: 0.7142857143rem;
   line-height: 1rem;
   color: #1c1c7c;
