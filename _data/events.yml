@@ -1,5 +1,8 @@
 upcoming:
-
+  - name: "Dribbble Philippines: Manila Meetup"
+    url: https://www.ticketbase.com/events/dribbble-ph-manila-meetup
+    date: September 1, 2016
+    title: From Adhesion to Design
 
 past:
   - name: "MiniFFC s2016e01: Meetup Edition"
