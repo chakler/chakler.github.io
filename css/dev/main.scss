@@ -183,6 +183,7 @@ abbr {
   font-variant-caps: all-small-caps;
   font-feature-settings: "c2sc", "smcp";
   cursor: help;
+  text-decoration: none;
 
   h1 > & {
     font-variant-caps: normal;

@@ -297,7 +297,8 @@ abbr {
   font-variant-caps: all-small-caps;
   -webkit-font-feature-settings: "c2sc", "smcp";
           font-feature-settings: "c2sc", "smcp";
-  cursor: help; }
+  cursor: help;
+  text-decoration: none; }
   h1 > abbr {
     font-variant-caps: normal;
     -webkit-font-feature-settings: "dlig";

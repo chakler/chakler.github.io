@@ -7,7 +7,8 @@ weight: 4
 
 ## Where do you work?
 
-I work at my own design studio called [The Missing Bulb](http://themissingbulb.com). We focuses on solving problems with good design and interaction.
+I currently work at [Grayscale Ltd](https://grayscale.com.hk/website-development-hong-kong/) and having front-end web developer as my main role. Occasionally, I also handle typography related matters for the company.
+<!-- I work at my own design studio called [The Missing Bulb](http://themissingbulb.com). We focuses on solving problems with good design and interaction. -->
 
 ## I have a project in mind, can you do it for free?
 
@@ -29,7 +30,7 @@ For <abbr title="Hypertext Markup Language">HTML</abbr> and <abbr title="Cascadi
 
 In terms of hardware, I used my <del>Fusion-Drived Mid-2009 Apple Macbook Pro 15 inch</del> Mid-2014 15 inch Apple Macbook Pro with Retina Display;
 In terms of design, I used Sketch for designing the interface and Adobe Photoshop for editing the photos;
-In terms of writing code, I use Sublime Text 2;
+In terms of writing code, I used Sublime Text;
 In terms of CMS, I'm not sure if it's counted as a CMS but I use Jekyll for generating the site;
 In terms of hosting, this site is hosted on Github so feel free to check my code [here](https://github.com/chakler/chakler.github.io).
 

@@ -296,7 +296,8 @@ abbr {
   border-bottom: 1px dotted #1c1c7c;
   font-variant-caps: all-small-caps;
   font-feature-settings: "c2sc", "smcp";
-  cursor: help; }
+  cursor: help;
+  text-decoration: none; }
   h1 > abbr {
     font-variant-caps: normal;
     font-feature-settings: "dlig"; }

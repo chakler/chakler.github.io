@@ -1,10 +1,20 @@
 upcoming:
+  - name: "Form, Function, & Class"
+    url: http://2017.formfunctionclass.com/
+    date: September 16, 2017
+    # title: From Adhesion to Design
+
+past:
+  - name: "Harbour Front"
+    url: https://www.meetup.com/HarbourFrontHK/events/236213558/
+    date: Janurary 19, 2017
+    title: Type is Ridiculous (and that's why I love it)
+
   - name: "Dribbble Philippines: Manila Meetup"
     url: https://www.ticketbase.com/events/dribbble-ph-manila-meetup
     date: September 1, 2016
     title: From Adhesion to Design
 
-past:
   - name: "MiniFFC s2016e01: Meetup Edition"
     url: http://www.eventbrite.com/e/miniffc-s2016e01-meetup-edition-tickets-22247432670
     date: March 15, 2016
