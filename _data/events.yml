@@ -1,14 +1,17 @@
 upcoming:
+
+past:
   - name: "Form, Function, & Class"
     url: http://2017.formfunctionclass.com/
     date: September 16, 2017
     title: Type Together
+    talk_url: http://aclr.co/presentations/type-together/type-together.pdf/
 
-past:
   - name: "Harbour Front"
     url: https://www.meetup.com/HarbourFrontHK/events/236213558/
     date: Janurary 19, 2017
     title: Type is Ridiculous (and that's why I love it)
+    talk_url: http://aclr.co/presentations/type-is-ridiculous/type-is-ridiculous.pdf/
 
   - name: "Dribbble Philippines: Manila Meetup"
     url: https://www.ticketbase.com/events/dribbble-ph-manila-meetup
