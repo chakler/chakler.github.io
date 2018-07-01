@@ -1,0 +1,16 @@
+/*------------ Plugins ------------*/
+
+.highlight { 
+  color: #686868;
+  background: $highlight; 
+  font-family: monospace;
+  font-size: 18 / 16 * 1em;
+  line-height: 36 / 18 * 1em;
+  margin-bottom: 18 / 18 * 1em;
+
+  pre {
+    width: auto;
+    white-space: pre-wrap;
+    padding: 18 / 18 * 1em 15px;
+  }
+}

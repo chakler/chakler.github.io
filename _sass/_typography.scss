@@ -1,0 +1,4 @@
+h1 {
+	@include textgrid(2, 1.3);
+	color: $color-major;
+}

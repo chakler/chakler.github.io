@@ -1,0 +1,162 @@
+// ==========================================================================
+// Breakpoint
+// - Check if the given size name is in the selected $breakpoints-model
+// - TRUE:
+//   (1) Get the input's corresponding value in px from $breakpoints-model
+//   (2) Prepare a list of breakpoint values to render a ranged media query
+//   (3) Determine how many breakpoints are there to prevent invalid range
+//   (4) Determine the index of the current breakpoint for comparison
+//   (5) If it is the last breakpoint in the list, there is no max-width
+//   (6) If it is the first breakpoint in the list, there is no point
+//       declaring min-width since it would be 0px
+//
+// - FALSE:
+//   (7) Render with the given string as is, e.g. 1200px
+// ==========================================================================
+@mixin breakpoint($size-name, $direction: only) {
+  @if map_has_key($breakpoints-model, $size-name) {
+    $value: map-get($breakpoints-model, $size-name);                     // (1)
+    $value-list: map_values($breakpoints-model);                         // (2)
+    $value-count: length($breakpoints-model);                            // (3)
+    $current-value-index: index($breakpoints-model, $size-name $value);  // (4)
+
+    @if $direction == only {
+      @if $current-value-index == $value-count {                        // (5)
+        @media (min-width: $value + px) { @content; }
+      } @else {
+        $next-value: nth($value-list, $current-value-index + 1) - 1;
+        @media (min-width: $value + px) and (max-width: $next-value + px) { @content; }
+      }
+    } @else {
+      @if $current-value-index == 1 {                                    // (6)
+        @content;
+      } @else {
+        @media (min-width: $value + px) { @content; }
+      }
+    }
+  } @else {
+    @media (min-width: $size-name) { @content; }                        // (7)
+  }
+}
+
+// ==========================================================================
+// Breakpoint-based Root Font Sizes
+// (1) Get the list of breakpoint names to help render media queries. Name is
+//     not included in the font size variable because $breakpoint-foundation
+//     starts with keyword "small" instead of "mini"
+// (2) If it is the first font size in the list, there is no point
+//     calling media query since it would be the base
+// ==========================================================================
+@mixin font-size-basis {
+  $breakpoint-names: map-keys($breakpoints-model);  // (1)
+  $previous-size: 0;
+  $index: 1;
+
+  @each $looping-size in $font-size-roots {
+    $size-name: nth($breakpoint-names, $index);
+
+    @if $index == 1 {                               // (2)
+      font-size: is-typegrid(($looping-size * $font-leading-ratio) / 16px * 100%, $looping-size / 16px * 100%);
+      line-height: is-typegrid(1rem, $font-leading-ratio);
+    } @else {
+      @if $looping-size != $previous-size  {
+        @include breakpoint($size-name, up) {
+          font-size: is-typegrid(($looping-size * $font-leading-ratio) / 16px * 100%, $looping-size / 16px * 100%);
+          line-height: is-typegrid(1rem, $font-leading-ratio);
+        }
+      }
+    }
+
+    $index: $index + 1;
+    $previous-size: $looping-size;
+  }
+}
+
+// ==========================================================================
+// Typegrid - by the great @chakler
+// ==========================================================================
+@mixin textgrid($lineheight: 1, $ratio: $font-leading-ratio) {
+  @if $typegrid == true {
+    line-height: $lineheight * 1rem;
+    font-size: $lineheight / $ratio * 1rem;
+  } @else {
+    @warn '$textgrid in is not turned on.';
+  }
+}
+
+@function is-typegrid($typegrid-val, $normal-val) {
+  @if $typegrid {
+    @return $typegrid-val;
+  } @else {
+    @return $normal-val;
+  }
+}
+
+// ==========================================================================
+// Helper Mixins
+// ==========================================================================
+@mixin lang($lang) {
+  :lang(#{$lang}) & {
+    @content;
+  }
+}
+
+@mixin multiple-states {
+  &:hover, &:focus, &:active {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin proportional($width: 1, $height: 1) {
+  position: relative;
+  max-width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: ($height / $width) * 100%;
+
+  > * {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@mixin transition($attribute: all, $duration: 450ms, $timing: cubic-bezier(0.23, 1, 0.32, 1)) {
+  transition: $attribute $duration $timing;
+}
+
+// ==========================================================================
+// Fixes - when browsers are not rendering things well enough
+// ==========================================================================
+@mixin fix-color {
+  transform: translateZ(0);
+}
+
+@mixin fix-fatnoodle($force: true) {
+  @if $force == true {
+    @include fix-color;
+  }
+
+  text-rendering: geometricPrecision;
+}

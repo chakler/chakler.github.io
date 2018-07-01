@@ -1,0 +1,59 @@
+@import 'theme-core/breakpoints';
+@import 'theme-core/mixins';
+
+// Breakpoints: refer to _breakpoints.scss for value sets
+$breakpoints-custom: (
+  'mini':   0,
+  'small':  640,
+  'medium': 768,
+  'large':  960,
+  'xlarge': 1200,
+  'full':   1680,
+);
+
+$breakpoints-model: $breakpoints-custom; // or 'breakpoints-uikit2', 'breakpoints-uikit3', 'breakpoints-foundation'
+
+// Font Sizes
+$typegrid: true;
+
+$font-size-roots: (
+  14px,
+  16px,
+  16px,
+  18px,
+  18px,
+);
+
+$font-leading-ratio: 1.5; // (typegrid) ? (Leading ÷ font size) : line-height;
+
+// Font Family
+// In case of Chinese, add the following between the Latin font declaration
+// Hiragino Sans GB, 冬青黑体, STHeiti, 华文黑体, Microsoft YaHei, 微软雅黑体, SimHei, 黑体;
+//-- typo:start --//
+$font-heading:     'termina', sans-serif; // 700
+$font-content:     'Farro', sans-serif; // 400
+//-- typo:end --//
+
+// Colours
+//-- colors:start --//
+$color-black:        rgba(28,28,124,1);
+$color-white:        #ffffff;
+// $color-gradient:     linear-gradient(to right, rgba($color-white, 0.92) 0%, $color-white 70%);
+$color-gradient:     linear-gradient(to right, rgba($color-white, 1) 0%, $color-white 70%);
+
+$color-major:        #ef4136;
+$color-minor:        #f9c9a5;
+//-- colors:end --//
+
+// Site variables
+//-- Logo:start --//
+$logo-owidth:  57;
+$logo-oheight: 49;
+$logo-ratio: $logo-owidth / $logo-oheight;
+//-- Logo:end --//
+
+//-- grid:start --//
+$spacing-unit:          20px;
+$spacing-unit--medium:  30px;
+$content-width:         1140px;
+//-- grid:end --//

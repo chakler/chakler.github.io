@@ -1,6 +1,3 @@
-@import "_syntax-highlighting";
-@import "../../bower_components/susy/sass/susy";
-
 /*------------ Set up ------------*/
 
 html, body, div, span, applet, object, iframe,
@@ -47,31 +44,6 @@ table {
   border-spacing: 0;
 }
 
-$susy: (
-  columns: 12,
-  gutters: 0.234375,
-  math: fluid
-);
-
-$break-mobile: 480px;
-$break-tablet: 768px;
-$break-desktop: 1140px;
-
-@mixin breakpoint($media) {
-  @if $media == p {
-    @media only screen and (max-width: $break-mobile - 1) { @content; }
-  }
-  @else if $media == l {
-    @media only screen and (min-width: $break-mobile) and (max-width: $break-tablet - 1) { @content; }
-  }
-  @else if $media == t {
-    @media only screen and (min-width: $break-tablet) and (max-width: $break-desktop - 1) { @content; }
-  }
-  @else if $media == d {
-    @media only screen and (min-width: $break-desktop) { @content; }
-  }
-}
-
 $highlight: #f8f8f8;
 
 // Default Theme
@@ -79,8 +51,8 @@ $highlight: #f8f8f8;
 $frontcolor: rgba(28,28,124,1);
 $frontcolor-h: lighten($frontcolor, 20%);
 $backcolor: rgba(255,232,217,1);
-$font: "cardea", Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
-$boldweight: 400;
+$font: "Farro", "termina", Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+$boldweight: 700;
 
 // 2015 Theme
 
@@ -107,22 +79,7 @@ $boldweight: 400;
 // $boldweight: 700;
 // Added rule at line 273
 
-/*------------ Plugins ------------*/
 
-.highlight { 
-  color: #686868;
-  background: $highlight; 
-  font-family: monospace;
-  font-size: 18 / 16 * 1em;
-  line-height: 36 / 18 * 1em;
-  margin-bottom: 18 / 18 * 1em;
-
-  pre {
-    width: auto;
-    white-space: pre-wrap;
-    padding: 18 / 18 * 1em 15px;
-  }
-}
 
 /*------------ Typography ------------*/
 

@@ -1,35 +1,35 @@
 module.exports = function(grunt) {
 
+  const sass = require('node-sass');
+
   // Project configuration.
   grunt.initConfig({
 
     sass: {
-      build: {
-        files: {
-          'css/dev/main.css': 'css/dev/main.scss'
-        }
-      }
-    },
-
-    autoprefixer: {
-      build: {
-        options: {
-          browsers: ['last 3 versions']
-        },
-        src: 'css/dev/main.css',
-        dest: 'css/dev/main-prefixed.css'
-      }
-    },
-
-    cssmin: {
       options: {
-        shorthandCompacting: false,
-        roundingPrecision: -1
+        implementation: sass,
+        sourceMap: true,
       },
-      target: {
+      dist: {
         files: {
-          'css/main.css': 'css/dev/main-prefixed.css'
+          '_sass/main.css': '_sass/main.scss',
         }
+      }
+    },
+
+    postcss: {
+      options: {
+        map: true,
+        processors: [
+          require('autoprefixer')({
+            browsers: ['last 3 versions']
+          }),
+          require('cssnano')(),
+        ]
+      },
+      dist: {
+        src: '_sass/main.css',
+        dest: 'assets/css/main.css'
       }
     },
 
@@ -51,8 +51,8 @@ module.exports = function(grunt) {
 
     watch: {
       sasscss: {
-        files: ['css/dev/*.scss'],
-        tasks: ['sass:build', 'autoprefixer', 'cssmin', 'notify:sass'],
+        files: ['_sass/*.scss', '_sass/*/*.scss'],
+        tasks: ['sass', 'postcss', 'notify:sass'],
         options: {
           spawn: false
         }
@@ -85,10 +85,9 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-notify');
+  grunt.loadNpmTasks('grunt-postcss');
+  grunt.loadNpmTasks('grunt-sass');
 
   grunt.registerTask('default', ['watch']);
 

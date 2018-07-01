@@ -1,0 +1,96 @@
+html {
+  box-sizing: border-box;
+  font-family: $font-content;
+  @include font-size-basis;
+  word-wrap: break-word;
+}
+
+body {
+  @include textgrid;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: $content-width - ($spacing-unit * 2);
+  padding: 0 $spacing-unit;
+  margin: 0 auto;
+
+  @include breakpoint(medium, up) {
+    max-width: $content-width - ($spacing-unit--medium * 2);
+    padding: 0 $spacing-unit--medium;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+*:last-child {
+  margin-bottom: 0;
+}
+
+::selection {
+  background: $color-major;
+  color: $color-white;
+}
+
+audio, canvas, img, svg, video {
+  height: auto;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6,
+address, blockquote, figure, p, ol, ul {
+  margin-top: 0;
+  margin-bottom: is-typegrid(0.5rem, 20px);
+}
+
+li {
+  margin-top: 0;
+  margin-bottom: is-typegrid(0.25rem, 10px);
+}
+
+code {
+  @include textgrid;
+  background: $color-minor;
+  padding: 5px 8px;
+  border-radius: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+}
+
+p:empty {
+  display: none;
+}
+
+hr {
+  margin: is-typegrid(0.5rem, 20px) 0;
+}
+
+
+input, textarea, button {
+  max-width: 100%;
+  padding: 0;
+  border: 1px solid currentcolor;
+  background: $color-white;
+  color: inherit;
+  font: inherit;
+}
+
+[type='checkbox'], [type='radio'] {
+  background: initial;
+  cursor: pointer;
+}
+
+select {
+  color: inherit;
+  font: inherit;
+}
+
+button, [type='button'], [type='submit'] {
+  cursor: pointer;
+}

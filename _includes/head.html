@@ -3,7 +3,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 
-  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | Designer who focuses on producing problem-solving solutions{% endif %}</title>
+  <title>
+    {% if page.title %}
+      {{ page.title }} | {{ site.title }}
+    {% else %}
+      {{ site.title }} | Designer who focuses on producing problem-solving solutions
+    {% endif %}
+  </title>
   <meta name="description" content="{% if page.peek %}{{ page.peek }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <meta property="og:title" content="{% if page.peek %}{{ page.title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | Designer who focuses on producing problem-solving solutions{% endif %}">
@@ -19,7 +25,7 @@
   <meta name="twitter:creator" content="@chakler">
   <meta name="twitter:image:src" content="{% if page.thumbnail %}{{ page.thumbnail | prepend: site.url }}{% else %}{{ "/assets/ogimage.png" | prepend: site.url }}{% endif %}">
 
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="icon" href="{{ "/favicon.png" | prepend: site.url }}" type="image/png"/>
   <link rel="shortcut icon" href="{{ "/favicon.png" | prepend: site.url }}" type="image/png"/>
@@ -27,10 +33,11 @@
   <script>
     (function(d) {
       var config = {
-        kitId: 'kdh7qad',
-        scriptTimeout: 3000
+        kitId: 'gni6mlf',
+        scriptTimeout: 3000,
+        async: true
       },
-      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
     })(document);
   </script>
   <style type="text/css">
