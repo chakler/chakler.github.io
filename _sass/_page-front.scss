@@ -15,39 +15,11 @@
 		margin-bottom: 1rem;
 	}
 
-	article + article {
-		margin-top: 1rem;
-	}
+	a {
+		transition: color 0.2s ease-out;
 
-	h3 {
-		margin-bottom: 0.25rem;
-	}
-
-	.info {
-		@include textgrid(0.5, 1.2);
-		// color: $color-major;
-		display: inline-block;
-		padding: 0.25rem 10px;
-		border: 1px solid currentcolor;
-		border-radius: 0.25rem;
-		margin-bottom: 0.5rem;
-
-		> * {
-			display: inline-block;
-		}
-
-		time {
-			padding-right: 5px;
-			border-right: 1px solid currentcolor;
-			margin-right: 5px;
-		}
-	}
-
-	.continue {
-		font-weight: 700;
-
-		&::after {
-			content: '→';
+		@include multiple-states {
+		  color: $color-major;
 		}
 	}
 }

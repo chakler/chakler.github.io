@@ -3,6 +3,7 @@ layout: speak
 title: Speak
 permalink: /speak/
 weight: 3
+pattern: "/assets/pattern/speak@2x.png"
 ---
 
 ## I enjoy sharing knowledge about visual design, front end web, and typography*.

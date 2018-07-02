@@ -15,10 +15,21 @@ a {
   // }
 }
 
-span, p, ul, ol {
-  a {
-    color: $color-major;
-    border-bottom: 1px solid currentcolor;
+.main_content, footer {
+  span, p, ul, ol {
+    a {
+      // color: $color-major;
+      border-bottom: 1px solid currentcolor;
+
+      @include multiple-states {
+        color: $color-major;
+      }
+    }
+
+    em {
+      font-weight: 700;
+      font-style: normal;
+    }
   }
 }
 
@@ -43,7 +54,7 @@ span, p, ul, ol {
     background-position: bottom left;
     position: fixed;
     top: $spacing-unit-v;
-    right: $spacing-unit-h / 2;
+    right: 120px;
     bottom: $spacing-unit-v;
     left: $spacing-unit-h / 2;
     z-index: 1;
@@ -93,6 +104,24 @@ main {
 
     @include breakpoint(large, up) {
       padding: $spacing-unit-v--large $spacing-unit-h--large;
+    }
+
+    .site_title {
+      @include textgrid(0.5, 1.2);
+      color: $color-white;
+      font-family: $font-heading;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      display: inline-block;
+      padding: 0.25rem 10px;
+      background: $color-major;
+      border-radius: 0.25rem;
+      margin-bottom: 2rem;
+
+      @include multiple-states {
+        color: $color-minor;
+      }
     }
   }
 }

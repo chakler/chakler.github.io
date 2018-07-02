@@ -3,6 +3,7 @@ layout: about
 title: About
 permalink: /about/
 weight: 2
+pattern: "/assets/pattern/about@2x.png"
 ---
 
 ## I’m Aceler Chua, a designer who focuses on producing problem-solving solutions in various creative ways.

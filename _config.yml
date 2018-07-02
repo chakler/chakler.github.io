@@ -1,5 +1,5 @@
 # Site settings
-title: Aceler Chua
+title: ACLR by Aceler
 email: hi@aclr.co
 description: "Personal website of Aceler Chua—a designer who focuses on producing problem-solving solutions in various creative ways."
 pattern: "/assets/pattern/aclr@2x.png"
@@ -26,3 +26,4 @@ defaults:
       type: "posts"
     values:
       layout: "article"
+      pattern: "/assets/pattern/article@2x.png"

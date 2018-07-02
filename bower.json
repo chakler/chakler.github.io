@@ -1,9 +1,0 @@
-{
-  "name": "aceler-chua-personal-site",
-  "version": "0.0.0",
-  "description": "Personal website of Aceler Chua",
-  "author": "Aceler Chua",
-  "devDependencies": {
-    "susy": "~2.2.5"
-  }
-}
