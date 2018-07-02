@@ -2,6 +2,7 @@
 title: Aceler Chua
 email: hi@aclr.co
 description: "Personal website of Aceler Chua—a designer who focuses on producing problem-solving solutions in various creative ways."
+pattern: "/assets/pattern/aclr@2x.png"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://aclr.co" # On Github
 # url: "http://127.0.0.1:4000" # On local

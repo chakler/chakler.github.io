@@ -6,22 +6,42 @@ layout: default
 
   <h1>{{ page.title }}</h1>
 
-  <time datetime="{{ page.date | date_to_xmlschema }}">
-    {% assign d = page.date | date: "%-d" %} 
-    {% assign m = page.date | date: "%B" %} 
-    {% case d %}
-      {% when '1' or '21' or '31' %}{{ d }}st
-      {% when '2' or '22' %}{{ d }}nd
-      {% when '3' or '23' %}{{ d }}rd
-      {% else %}{{ d }}th
-      {% endcase %}
-    {% case m %}
-      {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
-      {% when 'September' %}Sept.
-      {% else %}{{ page.date | date: "%b" }}.
-      {% endcase %}
-    {{ page.date | date: "%Y" }}
-  </time>
+  <div class="info">
+    <time datetime="{{ page.date | date_to_xmlschema }}">
+      {% assign d = page.date | date: "%-d" %} 
+      {% assign m = page.date | date: "%B" %} 
+      
+      Posted on 
+
+      {% case d %}
+        {% when '1' or '21' or '31' %}{{ d }}st
+        {% when '2' or '22' %}{{ d }}nd
+        {% when '3' or '23' %}{{ d }}rd
+        {% else %}{{ d }}th
+        {% endcase %}
+      {% case m %}
+        {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
+        {% when 'September' %}Sept.
+        {% else %}{{ page.date | date: "%b" }}.
+        {% endcase %}
+      
+      {{ page.date | date: "%Y" }}
+    </time>
+    <p class="reading-time">
+      
+        {% assign c = page.content | number_of_words %}
+        {% assign ct = c | divided_by: 200 | ceil %}
+
+        {% if ct == 1 %}
+          {{ ct }} minute read
+        {% elsif ct <= 1 %}
+          1 minute read
+        {% else %}
+          {{ ct }} minutes read
+        {% endif %}
+
+    </p>
+  </div>
 
   {{ content }}
 

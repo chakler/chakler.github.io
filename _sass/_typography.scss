@@ -2,3 +2,23 @@ h1 {
 	@include textgrid(2, 1.3);
 	color: $color-major;
 }
+
+h2 {
+	@include textgrid(1.5, 1.3);
+}
+
+h3 {
+	@include textgrid(1.5, 1.5);
+}
+
+h4 {
+	@include textgrid(1.25, 1.3);
+}
+
+h5 {
+	@include textgrid(1.25, 1.5);
+}
+
+h6 {
+	@include textgrid(1, 1.3);
+}

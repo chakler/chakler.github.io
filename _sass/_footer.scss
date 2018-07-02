@@ -1,0 +1,14 @@
+footer {
+	@include textgrid(0.75, 1.5);
+	color: $color-major;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem 10px;
+	border: 1px solid currentcolor;
+	border-radius: 0.5rem;
+	margin-top: 2rem;
+
+	.copyright {
+		margin-right: 10px;
+	}
+}

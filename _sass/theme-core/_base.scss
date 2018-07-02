@@ -9,18 +9,6 @@ body {
   @include textgrid;
 }
 
-.wrapper {
-  width: 100%;
-  max-width: $content-width - ($spacing-unit * 2);
-  padding: 0 $spacing-unit;
-  margin: 0 auto;
-
-  @include breakpoint(medium, up) {
-    max-width: $content-width - ($spacing-unit--medium * 2);
-    padding: 0 $spacing-unit--medium;
-  }
-}
-
 *, *::before, *::after {
   box-sizing: inherit;
   margin: 0;

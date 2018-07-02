@@ -21,7 +21,7 @@ $font-size-roots: (
   16px,
   16px,
   18px,
-  18px,
+  20px,
 );
 
 $font-leading-ratio: 1.5; // (typegrid) ? (Leading ÷ font size) : line-height;
@@ -38,11 +38,10 @@ $font-content:     'Farro', sans-serif; // 400
 //-- colors:start --//
 $color-black:        rgba(28,28,124,1);
 $color-white:        #ffffff;
-// $color-gradient:     linear-gradient(to right, rgba($color-white, 0.92) 0%, $color-white 70%);
-$color-gradient:     linear-gradient(to right, rgba($color-white, 1) 0%, $color-white 70%);
 
 $color-major:        #ef4136;
 $color-minor:        #f9c9a5;
+$color-gradient:     linear-gradient(to right, $color-major 0%, $color-minor 70%);
 //-- colors:end --//
 
 // Site variables
@@ -53,7 +52,11 @@ $logo-ratio: $logo-owidth / $logo-oheight;
 //-- Logo:end --//
 
 //-- grid:start --//
-$spacing-unit:          20px;
-$spacing-unit--medium:  30px;
-$content-width:         1140px;
+$spacing-unit-v:          1rem;
+$spacing-unit-v--medium:  1.5rem;
+$spacing-unit-v--large:   2rem;
+$spacing-unit-h:          20px;
+$spacing-unit-h--medium:  30px;
+$spacing-unit-h--large:   60px;
+$content-width:           960px;
 //-- grid:end --//
