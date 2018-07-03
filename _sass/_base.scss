@@ -15,11 +15,21 @@ a {
   // }
 }
 
+hr {
+  width: 100%;
+  max-width: 400px;
+  height: 0;
+  border: 0;
+  border-bottom: 2px solid $color-major;
+  margin: 1.5rem 0;
+}
+
 .main_content, footer {
   span, p, ul, ol {
     a {
       // color: $color-major;
-      border-bottom: 1px solid currentcolor;
+      padding-bottom: 1px;
+      border-bottom: 2px solid $color-major;
 
       @include multiple-states {
         color: $color-major;

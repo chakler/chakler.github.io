@@ -1,8 +1,7 @@
 ---
-layout: faq
 title: FAQ
-permalink: /faq/
 weight: 4
+pattern: "/assets/pattern/faq@2x.png"
 ---
 
 ## Where do you work?

@@ -8,6 +8,13 @@ footer {
 	border-radius: 0.5rem;
 	margin-top: 2rem;
 
+	.copyright,
+	.colophon {
+		p > a {
+			border-bottom: 1px solid $color-major;
+		}
+	}
+
 	.copyright {
 		margin-right: 10px;
 	}

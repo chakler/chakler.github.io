@@ -1,0 +1,12 @@
+.is_page_speak {
+	#upcoming-events ~ ul,
+	#past-events ~ ul {
+		li + li {
+			margin-top: 1rem;
+		}
+
+		p > a:first-of-type {
+			font-weight: 700;
+		}
+	}
+}

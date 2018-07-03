@@ -29,9 +29,15 @@ article {
 
 	.continue {
 		font-weight: 700;
+		padding-bottom: 1px;
+    border-bottom: 2px solid $color-major;
 
-		&::after {
-			content: '→';
-		}
+    @include multiple-states {
+      color: $color-major;
+    }
+
+		// &::after {
+		// 	content: '→';
+		// }
 	}
 }

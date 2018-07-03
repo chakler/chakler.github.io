@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Farro';
+  src: url('/assets/font/Farro-Regular.eot');
+  src: local('Farro'),
+       url('/assets/font/Farro-Regular.eot') format('embedded-opentype'),
+       url('/assets/font/Farro-Regular.woff2') format('woff2'),
+       url('/assets/font/Farro-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Farro';
+  src: url('/assets/font/Farro-Bold.eot');
+  src: local('Farro'),
+       url('/assets/font/Farro-Bold.eot') format('embedded-opentype'),
+       url('/assets/font/Farro-Bold.woff2') format('woff2'),
+       url('/assets/font/Farro-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}

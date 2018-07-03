@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * Syntax highlighting styles
  */
@@ -301,6 +300,20 @@ button, [type='button'], [type='submit'] {
   border: 0;
   clip: rect(0 0 0 0); }
 
+@font-face {
+  font-family: 'Farro';
+  src: url("/assets/font/Farro-Regular.eot");
+  src: local("Farro"), url("/assets/font/Farro-Regular.eot") format("embedded-opentype"), url("/assets/font/Farro-Regular.woff2") format("woff2"), url("/assets/font/Farro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Farro';
+  src: url("/assets/font/Farro-Bold.eot");
+  src: local("Farro"), url("/assets/font/Farro-Bold.eot") format("embedded-opentype"), url("/assets/font/Farro-Bold.woff2") format("woff2"), url("/assets/font/Farro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
 h1 {
   line-height: 2rem;
   font-size: 1.5384615385rem;
@@ -390,8 +403,17 @@ a {
   text-decoration: none;
   transition: color 0.2s ease-out; }
 
+hr {
+  width: 100%;
+  max-width: 400px;
+  height: 0;
+  border: 0;
+  border-bottom: 2px solid #ef4136;
+  margin: 1.5rem 0; }
+
 .main_content span a, .main_content p a, .main_content ul a, .main_content ol a, footer span a, footer p a, footer ul a, footer ol a {
-  border-bottom: 1px solid currentcolor; }
+  padding-bottom: 1px;
+  border-bottom: 2px solid #ef4136; }
   .main_content span a:hover, .main_content span a:focus, .main_content span a:active, .main_content p a:hover, .main_content p a:focus, .main_content p a:active, .main_content ul a:hover, .main_content ul a:focus, .main_content ul a:active, .main_content ol a:hover, .main_content ol a:focus, .main_content ol a:active, footer span a:hover, footer span a:focus, footer span a:active, footer p a:hover, footer p a:focus, footer p a:active, footer ul a:hover, footer ul a:focus, footer ul a:active, footer ol a:hover, footer ol a:focus, footer ol a:active {
     color: #ef4136; }
 
@@ -494,6 +516,14 @@ main {
 .bio {
   margin-bottom: 1rem; }
 
+.is_page_speak #upcoming-events ~ ul li + li,
+.is_page_speak #past-events ~ ul li + li {
+  margin-top: 1rem; }
+
+.is_page_speak #upcoming-events ~ ul p > a:first-of-type,
+.is_page_speak #past-events ~ ul p > a:first-of-type {
+  font-weight: 700; }
+
 article h3 {
   margin-bottom: 0.25rem; }
 
@@ -516,9 +546,11 @@ article .info {
     margin-right: 5px; }
 
 article .continue {
-  font-weight: 700; }
-  article .continue::after {
-    content: '→'; }
+  font-weight: 700;
+  padding-bottom: 1px;
+  border-bottom: 2px solid #ef4136; }
+  article .continue:hover, article .continue:focus, article .continue:active {
+    color: #ef4136; }
 
 footer {
   line-height: 0.75rem;
@@ -530,6 +562,9 @@ footer {
   border: 1px solid currentcolor;
   border-radius: 0.5rem;
   margin-top: 2rem; }
+  footer .copyright p > a,
+  footer .colophon p > a {
+    border-bottom: 1px solid #ef4136; }
   footer .copyright {
     margin-right: 10px; }
 

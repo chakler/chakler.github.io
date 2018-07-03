@@ -1,7 +1,5 @@
 ---
-layout: about
 title: About
-permalink: /about/
 weight: 2
 pattern: "/assets/pattern/about@2x.png"
 ---
@@ -19,3 +17,8 @@ I founded *The Missing Bulb*, a multidisciplinary design studio focusing on crea
 With a few awesome friends, we created *Type Philippines* to provide a common ground for all the type enthusiasts. Our aim is to uplift the standard and improve the awareness of typography in the Philippines. Join our type discussions in our [Facebook group](https://www.facebook.com/groups/typeph/).
 
 I was the Design & Tech Lead of *[Philippine Web Designers Organization](http://pwdo.org)* from 2013 to 2015. I used to be in charge of creating identities and websites for events we organize, like [Form, Function & Class](http://formfunctionclass.com).
+
+Have something you need to talk about? Feel free to contact me by [e-mail](mailto:{{ site.data.personal.email }}) or by [phone](tel:{{ site.data.personal.phone }}).
+
+Remember to follow me on [Twitter]({{ site.data.personal.twitter }}), [GitHub]({{ site.data.personal.github }}), [Dribbble]({{ site.data.personal.dribbble }}), and [Instagram]({{ site.data.personal.instagram }}).
+  	

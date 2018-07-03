@@ -5,13 +5,14 @@
 @import 'theme-core/base';
 @import 'theme-core/helpers';
 
-// @import "fonts";
+@import "font";
 @import "typography";
 @import "header";
 @import "base";
 
 @import "page-front";
 @import "page-about";
+@import "page-speak";
 
 @import "article";
 
