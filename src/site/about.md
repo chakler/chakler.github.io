@@ -8,6 +8,11 @@ layout: layouts/base.html
 
 I am Aceler Chua, I’m a designer of typefaces, producer of fonts, and maker of websites.
 
+<figure>
+  <img src="/assets/images/fullpic-bw-2016.png" alt="Being in my old studio">
+  <figcaption>Being in my old studio</figcaption>
+</figure>
+
 ## On type
 
 Good letterform and typography improves communication; I have always been an advocate of good typography. I’ve been doing consultancy work with clients, advising on improving the typography in logos, books, and websites. I’ve also conducted talks and workshops to introduce typography to different audiences.

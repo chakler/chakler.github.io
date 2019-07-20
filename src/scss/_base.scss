@@ -3,9 +3,12 @@
   --color-pos--2: #{lighten($color-black, 40)};
   --color-neg: #{$color-white};
   --color-neg--2: #{lighten($color-white, 5)};
-  --shadow: 0 10px 80px 0px #{rgba($color-black, 0.25)},
+  --shadow: 0 15px 80px 0px #{rgba($color-black, 0.25)},
             0 -5px 10px 0px #{rgba($color-white, 0.1)},
             0 5px 10px 0px #{rgba($color-black, 0.1)};
+  --shadow--2: 0 10px 20px 0px #{rgba($color-black, 0.35)},
+               0 -5px 8px 0px #{rgba($color-white, 0.1)},
+               0 5px 8px 0px #{rgba($color-black, 0.25)};
 
   @media (prefers-color-scheme: dark) {
     --color-pos: #{$color-white};
@@ -46,12 +49,86 @@ a {
   }
 }
 
+.view {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
 .content-block {
-  padding-top: gs-spacer(2);
-  padding-bottom: gs-spacer(2);
+  display: grid;
+  max-width: $grid-wrapper-max-width * 1px;
+  margin: 0 auto;
+  grid: auto / 300px auto;
+  grid-gap: 30;
+  position: relative;
+
+  @include gs-breakpoint-loop($grid-gutter) using ($gutter) {
+    grid-gap: gs-spacer(1) $gutter;
+    padding: gs-spacer(1) $gutter 0;
+  }
+}
+
+.logo {
+  grid-area: 1/1/2/2;
+  align-self: center;
+  position: relative;
+  // width: 28vw;
+  // top: -1rem;
+  // left: -1rem;
+
+  a {
+    display: block;
+    border-bottom: 0;
+    transition: transform 0.2s ease-out;
+
+    &::before {
+      content: "";
+      width: 100vw;
+      background: var(--color-pos);
+      position: absolute;
+      top: 0;
+      right: 50%;
+      bottom: 0;
+    }
+
+    &:hover,
+    &:active {
+      transform: translateX(8px);
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    padding-top: 100%;
+    background-image: url('/assets/images/logo.svg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+
+    @media (prefers-color-scheme: dark) {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: 5px solid var(--color-pos);
+        border-radius: 50%;
+        z-index: 1;
+      }
+    }
+
+    img {
+      @extend %sr-only;
+    }
+  }
 }
 
 main {
+  grid-area: 2/2/3/4;
   position: relative;
 
   &::before {
@@ -70,56 +147,57 @@ main {
     padding-top: gs-spacer(2);
     padding-bottom: gs-spacer(3.5);
     background: var(--color-neg--2);
-    border-radius: gs-spacer(1.5);
+    border-radius: gs-spacer(1.5) gs-spacer(1.5) 0 0;
     box-shadow: var(--shadow);
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
 
     @include gs-breakpoint-loop($grid-gutter) using ($gutter) {
       padding-left: $gutter;
       padding-right: $gutter;
     }
 
-    // p {
-    //   max-width: 32rem;
-    // }
+    h1 {
+      @extend %type-article-title;
+      max-width: 26rem;
+      margin-bottom: gs-spacer(1.75);
+      position: relative;
 
-    // &::before {
-    //   content: '';
-    //   display: block;
-    //   height: gs-spacer(0.75);
-    //   border: gs-spacer(0.25) solid #ffc200;
-    //   border-top: 0;
-    //   border-radius: 0 0 gs-spacer(1) gs-spacer(1);
-    //   position: absolute;
-    //   bottom: gs-spacer(1);
-    //   left: gs-spacer(1);
-    //   right: gs-spacer(1);
-    // }
-
-    &::before {
-      content: '';
-      display: block;
-      height: gs-spacer(1.25);
-      border-top: gs-spacer(0.15) solid #ffcf00;
-      position: absolute;
-      bottom: gs-spacer(0.5);
-      left: 0;
-      right: 0;
+      &::after {
+        content: "";
+        color: $color-major;
+        display: block;
+        width: 100vw;
+        border-bottom: 3px solid $color-major;
+        position: absolute;
+        bottom: gs-spacer(-0.5);
+      }
     }
 
-    &::after {
-      content: '';
-      display: block;
-      height: gs-spacer(1.25);
-      background: var(--color-neg--2);
-      border: gs-spacer(0.15) solid #ffcf00;
-      border-top: 0;
-      border-radius: 0 0 gs-spacer(1.2) gs-spacer(1.2);
-      position: absolute;
-      bottom: gs-spacer(0.5);
-      left: gs-spacer(0.5);
-      right: gs-spacer(0.5);
+    p {
+      max-width: 32rem;
+    }
+
+    figure {
+      max-width: 32rem;
+      margin: gs-spacer(0.75) 0 gs-spacer(0.75);
+
+      img {
+        border-radius: gs-spacer(0.25);
+        box-shadow: var(--shadow--2);
+
+        @include gs-breakpoint-loop($grid-gutter) using ($gutter) {
+          $offset: $gutter * 2;
+
+          max-width: calc(100% + #{$offset});
+          margin-left: -$offset;
+        }
+      }
+
+      figcaption {
+        @extend %type-article-figcaption;
+        text-align: right;
+      }
     }
   }
 }

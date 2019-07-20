@@ -3,3 +3,13 @@
   font-family: $font-heading;
   font-weight: 900;
 }
+
+%type-article-title {
+  @include gs-textgrid(42 / 18, 1.75);
+  font-family: $font-heading;
+  font-weight: 900;
+}
+
+%type-article-figcaption {
+  @include gs-textgrid(14 / 18, 0.75);
+}
