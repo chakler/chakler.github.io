@@ -1,41 +1,30 @@
-My Personal Website
-==========================
-Check it out at http://aclr.co
+# ACLR Website
 
-## Local development
+Personal website of Aceler Chua
 
-### Jekyll
+## Version 2.0.0
 
-This site uses [Jekyll](http://jekyllrb.com) as it's site generator. So if you want to see how the site works on your local device, you're required to install Jekyll.
+## System Requirement
 
-1. Make sure you have Ruby(v2.0.0 at least) installed.
-2. Install Jekyll with `gem install jekyll`
-3. To run Jekyll, type `jekyll serve` and hit enter.
-4. Head over to [127.0.0.1:4000](http://127.0.0.1:4000).
-5. To stop Jekyll from watching the files and running the server, just hit `control + c`
+To run this workflow, you should have the following installed globally. If you are on Mac, consider using [Homebrew](https://brew.sh/) to prevent permission issues.
 
-### Stylesheets
+* [Node.js](https://nodejs.org/en/download/)
+* [npm](https://docs.npmjs.com/getting-started/installing-node)
+* [gulp-cli](https://github.com/gulpjs/gulp-cli)
 
-This site uses [Sass](http://sass-lang.com) as the pre-processor of the stylesheets. It also uses [Susy](http://susy.oddbird.net) for setting the grids in the website.
+The package comes with linter files to maintain code style and you are encouraged to have the below linters installed.
 
-All the Sass files are watch by [Grunt](http://gruntjs.com) and auto prefixed with [grunt-autoprefixer](https://www.npmjs.com/package/grunt-autoprefixer).
+* [ESLint](https://eslint.org/)
+* [Sass Lint](https://github.com/sasstools/sass-lint)
 
-#### Susy
+## Setup
 
-I recommend installing Susy first to make sure the Sass compilation process runs properly. The site uses [Bower](http://bower.io) to include Susy into the site directory.
+1. Run `npm install` in the terminal to install the dev dependencies
+2. Run `npm run init` in the terminal to initialise build process
+3. Edit base configurations in `/src/site/_data/siteconfig.js`
+4. Set up environment based config files in `/src/site/_data`
 
-1. Make sure you have [NPM](https://npmjs.com) installed.
-2. Install Bower with `npm install -g bower`(sometimes `sudo npm install -g bower` is required.)
-3. Go to the root directory of the project.
-4. Type `bower install` and hit enter.
-5. Now you have Susy installed inside `bower_components`.
+## Development
 
-#### Grunt
-
-Now we have Susy installed, we need Grunt to watch and compile the Sass files for us.
-
-1. Go to the root directory of the project.
-2. Type `npm install`.
-3. Now Grunt and all other dependencies will be installed inside `node_modules`.
-4. Go ahead and run `grunt`.
-5. Everytime you save `css/dev/main.scss`, Grunt will run and compile it into auto-prefixed css. The compiled css file will be placed at `css/main.css`.
+* Run `npm run build` in the terminal to create a compiled copy of the site at `/dist`
+* Run `npm run serve` in the terminal for a development instance

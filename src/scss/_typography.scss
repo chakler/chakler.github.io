@@ -1,0 +1,5 @@
+%type-bighead {
+  @include gs-textgrid(38 / 18, 1.5);
+  font-family: $font-heading;
+  font-weight: 900;
+}

@@ -1,0 +1,63 @@
+header {
+  margin-bottom: gs-spacer(2);
+
+  .header__main {
+    .container {
+      @include gs-grid-row;
+      align-items: center;
+    }
+
+    .logo {
+      @include gs-grid-column(4);
+
+      &__wrapper {
+        width: 100%;
+        padding-top: 100%;
+        background-image: url('/assets/images/logo.svg');
+        background-position: center;
+        background-size: cover;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+
+        @media (prefers-color-scheme: dark) {
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border: 5px solid var(--color-pos);
+            border-radius: 50%;
+            z-index: 1;
+          }
+        }
+
+        img {
+          @extend %sr-only;
+        }
+      }
+    }
+
+    .content {
+      @include gs-grid-column(8);
+      padding-right: 20px;
+
+      h1 {
+        @extend %type-bighead;
+        font-weight: 400;
+
+        span {
+          font-weight: 900;
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 0;
+      }
+    }
+  }
+}

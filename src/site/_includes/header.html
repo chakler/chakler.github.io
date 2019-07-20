@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% if title == blank %}
+<title>{{ site.name }} | {{ site.description }}</title>
+{% else %}
+<title>{{ title }} | {{ site.name }}</title>
+{% endif %}
+{% if excerpt == blank %}
+<meta name="description" content="{{ site.description }}"/>
+{% else %}
+<meta name="description" content="{{ excerpt }}"/>
+{% endif %}
+{% if noIndex == true %}
+<meta name="robots" content="noindex, follow">
+{% endif %}
+<link rel="stylesheet" href="https://use.typekit.net/goi1pms.css">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="{{ bodyClass }}">
+  <div class="view">
+    <div class="content-block">
+      <header>
+        <div class="wrapper">
+          <div class="header__main">
+            <div class="container">
+              <div class="logo">
+                <div class="logo__wrapper">
+                  <img src="{{ '/assets/images/logo.svg' | url }}" alt="{{ site.name }}">
+                </div>
+              </div>
+
+              <div class="content">
+                <h1>
+                  Hi, I’m <span>Aceler Chua</span>, a <span>designer of typefaces</span>, <span>producer of fonts</span>, and <span>maker of websites.</span>
+                </h1>
+
+                <nav class="main_navigation">
+                  <ul>
+                    {%- for item in collections.nav -%}
+                    <li>
+                      <a href="{{ item.url }}">{{ item.data.title }}</a>
+                    </li>
+                    {%- endfor -%}
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </header>
