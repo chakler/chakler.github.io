@@ -9,8 +9,8 @@ layout: layouts/base.html
 I am Aceler Chua, I’m a designer of typefaces, producer of fonts, and maker of websites.
 
 <figure>
-  <img src="/assets/images/fullpic-bw-2016.png" alt="Being in my old studio">
-  <figcaption>Being in my old studio</figcaption>
+  <img src="/assets/images/fullpic-bw-2019.png" alt="Looking at a light bulb in Taiwan">
+  <figcaption>Looking at a light bulb in Taiwan</figcaption>
 </figure>
 
 ## On type

@@ -1,5 +1,6 @@
 _resources
-_site
+dist
+src/site/assets
 node_modules
 bower_components
 .sass-cache
