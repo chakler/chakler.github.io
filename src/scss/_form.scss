@@ -1,19 +1,118 @@
 form {
-  .form__container {
-
+  .form__description {
+    margin-bottom: gs-spacer(1.5);
   }
 
   .form__field {
     display: block;
+    margin-bottom: gs-spacer(1.25);
 
     label {
       @extend %type-small-title;
+      display: inline-block;
+      margin-bottom: gs-spacer(0.5);
+    }
+
+    select {
+      appearance: none;
+      color: var(--color-pos);
+      font-weight: 400;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      border: 3px solid var(--color-pos--2);
+      border-radius: gs-spacer(0.25);
+      margin: 0;
+      background-color: transparent;
+      background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ff5500%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+      background-repeat: no-repeat;
+      background-position: right .7em top 50%;
+      background-size: .65em auto;
+      transition: border 0.2s ease-out;
+
+      @include gs-breakpoint-loop($grid-gutter) using ($gutter) {
+        padding: gs-spacer(0.5) $gutter / 2;
+      }
+
+      &::-ms-expand {
+        display: none;
+      }
+
+      &:active,
+      &:focus {
+        border-color: $color-major;
+      }
     }
 
     input,
     textarea,
     select {
       display: block;
+    }
+
+    [type="text"],
+    [type="email"],
+    [type="tel"] {
+      appearance: none;
+      width: 100%;
+      max-width: 18rem;
+      padding: 0 0 gs-spacer(0.25);
+      background: transparent;
+      border: 0;
+      border-bottom: 3px solid var(--color-pos--2);
+      transition: border 0.2s ease-out;
+
+      &:active,
+      &:focus {
+        border-bottom-color: $color-major;
+      }
+    }
+
+    textarea {
+      @include gs-textgrid;
+      appearance: none;
+      width: 100%;
+      background: transparent;
+      border: 3px solid var(--color-pos--2);
+      border-radius: gs-spacer(0.25);
+      transition: border 0.2s ease-out;
+
+      @include gs-breakpoint-loop($grid-gutter) using ($gutter) {
+        padding: gs-spacer(0.5) $gutter / 2;
+      }
+
+      &:active,
+      &:focus {
+        border-color: $color-major;
+      }
+    }
+
+    &--jackpot {
+      @extend %sr-only;
+    }
+  }
+
+  .form__submit {
+    margin-top: gs-spacer(2);
+
+    button[type="submit"] {
+      color: $color-white;
+      appearance: none;
+      display: block;
+      width: 100%;
+      background: $color-major;
+      border: 0;
+      border-radius: gs-spacer(0.25);
+      transition: background 0.2s ease-out;
+
+      @include gs-breakpoint-loop($grid-gutter) using ($gutter) {
+        padding: gs-spacer(0.75) $gutter / 2;
+      }
+
+      &:hover,
+      &:active {
+        background: lighten($color-major, 15);
+      }
     }
   }
 
@@ -22,12 +121,16 @@ form {
     background: var(--color-neg--2);
     box-shadow: var(--shadow--2);
     border-radius: gs-spacer(0.25);
-    margin-top: gs-spacer(0.75);
+    margin-top: gs-spacer(1.5);
     margin-bottom: gs-spacer(0.75);
+
+    @media (prefers-color-scheme: dark) {
+      border: 3px solid var(--color-pos--2);
+    }
 
     .form__container {
       @include gs-breakpoint-loop($grid-gutter) using ($gutter) {
-        padding: gs-spacer(1) $gutter;
+        padding: gs-spacer(1.5) $gutter;
       }
     }
   }

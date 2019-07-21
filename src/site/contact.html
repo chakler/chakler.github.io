@@ -11,12 +11,16 @@ layout: layouts/base.html
 </p>
 
 <p>
-  Fill in the necessary information so I know what you need and what you’re expecting. I’ll reply to you as soon as possible.
+  Fill me in the necessary information so I know what you need and what you’re expecting. I’ll reply to you as soon as possible.
 </p>
 
-<form class="form contact-form" name="contact" netlify>
+<form class="form contact-form" name="contact" netlify-honeypot="jackpot" data-netlify="true">
   <div class="form__container">
-    <p class="form__field name">
+    <p class="form__description">
+      Please fill in all the fields below.
+    </p>
+
+    <p class="form__field form__field--name">
       <label for="name">Your name</label>
 
       <input id="name" type="text" name="name" required/>
@@ -29,7 +33,7 @@ layout: layouts/base.html
     </p>
 
     <p class="form__field form__field--nature">
-      <label for="nature">What’s the nature of the project?</label>
+      <label for="nature">What’s your project about?</label>
 
       <select name="nature" id="nature">
         <option value="type-design">Type design</option>
@@ -43,12 +47,18 @@ layout: layouts/base.html
     </p>
 
     <p class="form__field form__field--details">
-      <label for="details">Tell me more about your project</label>
+      <label for="details">Tell me more about your project, and what you’re expecting from me</label>
 
-      <textarea name="details" id="details" cols="30" rows="10" require></textarea>
+      <textarea name="details" id="details" cols="30" rows="10" required></textarea>
     </p>
 
-    <p>
+    <p class="form__field form__field--jackpot">
+      <label>Don’t fill this out if you're human</label>
+
+      <input name="jackpot"/>
+    </p>
+
+    <p class="form__submit">
       <button type="submit">Send</button>
     </p>
   </div>

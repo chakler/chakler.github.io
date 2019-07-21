@@ -11,7 +11,7 @@
 }
 
 %type-small-title {
-  @include gs-textgrid(22 / 18, 1.25);
+  @include gs-textgrid(22 / 18, 1);
   font-family: $font-heading;
   font-weight: 900;
 }
