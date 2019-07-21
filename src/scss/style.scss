@@ -32,4 +32,6 @@ Text Domain: {{ site.textDomain }}
 @import 'typography';
 
 @import 'base';
+@import 'form';
 @import 'header';
+@import 'content';

@@ -1,0 +1,34 @@
+form {
+  .form__container {
+
+  }
+
+  .form__field {
+    display: block;
+
+    label {
+      @extend %type-small-title;
+    }
+
+    input,
+    textarea,
+    select {
+      display: block;
+    }
+  }
+
+  &.contact-form {
+    @extend %pop-out;
+    background: var(--color-neg--2);
+    box-shadow: var(--shadow--2);
+    border-radius: gs-spacer(0.25);
+    margin-top: gs-spacer(0.75);
+    margin-bottom: gs-spacer(0.75);
+
+    .form__container {
+      @include gs-breakpoint-loop($grid-gutter) using ($gutter) {
+        padding: gs-spacer(1) $gutter;
+      }
+    }
+  }
+}

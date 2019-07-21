@@ -1,16 +1,22 @@
 header {
-  grid-area: 1/2/2/3;
+  // grid-area: 1/2/2/3;
+  grid-column: 1/ span 2;
   position: relative;
   align-self: center;
   // position: sticky;
   // top: 0;
 
+  @include gs-breakpoint(medium, up) {
+    grid-column: 2/ span 1;
+  }
+
   .header__main {
-    padding-top: gs-spacer(2);
+    padding-top: gs-spacer(1);
     padding-bottom: gs-spacer(1);
 
     .content {
       @include gs-breakpoint-loop($grid-gutter) using ($gutter) {
+        padding-right: $gutter;
         padding-left: $gutter;
       }
 

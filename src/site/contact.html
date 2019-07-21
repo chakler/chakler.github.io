@@ -4,18 +4,52 @@ tags: nav
 layout: layouts/base.html
 ---
 
+<h1>Contact</h1>
 
-<form name="contact" netlify>
-  <p>
-    <label>Name: <input type="text" name="name" size="40"></label>
-  </p>
-  <p>
-    <label>Email: <input type="text" name="email" size="40"></label>
-  </p>
-  <p>
-    <label>Messages: <textarea name="message"></textarea></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
+<p>
+  Got something in mind? Contact me through the form below. I’m open to projects related to type design, hand lettering, web design, and web development.
+</p>
+
+<p>
+  Fill in the necessary information so I know what you need and what you’re expecting. I’ll reply to you as soon as possible.
+</p>
+
+<form class="form contact-form" name="contact" netlify>
+  <div class="form__container">
+    <p class="form__field name">
+      <label for="name">Your name</label>
+
+      <input id="name" type="text" name="name" required/>
+    </p>
+
+    <p class="form__field form__field--email">
+      <label for="email">You email address</label>
+
+      <input id="email" type="email" name="email" required/>
+    </p>
+
+    <p class="form__field form__field--nature">
+      <label for="nature">What’s the nature of the project?</label>
+
+      <select name="nature" id="nature">
+        <option value="type-design">Type design</option>
+        <option value="web-design">Web design</option>
+        <option value="web-development">Web development</option>
+        <option value="type-consultation">Type consultation</option>
+        <option value="speak">Speaking engagement</option>
+        <option value="hand-lettering">Hand lettering</option>
+        <option value="other">Other</option>
+      </select>
+    </p>
+
+    <p class="form__field form__field--details">
+      <label for="details">Tell me more about your project</label>
+
+      <textarea name="details" id="details" cols="30" rows="10" require></textarea>
+    </p>
+
+    <p>
+      <button type="submit">Send</button>
+    </p>
+  </div>
 </form>

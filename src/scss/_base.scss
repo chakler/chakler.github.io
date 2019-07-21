@@ -17,9 +17,43 @@
     --color-neg--2: #{lighten($color-black, 5)};
     --shadow: 0 5px 45px -5px #{rgba(0, 0, 0, 0.75)},
               0 -5px 100px 0px #{rgba($color-white, 0.03)};
+    --shadow--2: 0 5px 8px 0px #{rgba($color-black, 0.25)};
   }
 }
 
+// extends
+%pop-out {
+  @include gs-breakpoint-loop($grid-gutter) using ($gutter) {
+    $offset: $gutter * 1.5;
+
+    width: calc(100% + #{$offset * 2});
+    max-width: calc(32rem + #{$offset * 2});
+    margin-left: -$offset;
+    margin-right: -$offset;
+  }
+
+  @include gs-breakpoint(medium, up) {
+    @include gs-breakpoint-loop($grid-gutter) using ($gutter) {
+      $offset: $gutter * 2;
+
+      width: calc(100% + #{$offset});
+      max-width: calc(32rem + #{$offset});
+      margin-right: -$offset;
+      margin-left: 0;
+    }
+  }
+
+  @include gs-breakpoint(large, up) {
+    @include gs-breakpoint-loop($grid-gutter) using ($gutter) {
+      $offset: $gutter * 2;
+
+      max-width: calc(32rem + #{$offset});
+      margin-left: -$offset;
+    }
+  }
+}
+
+// general
 body {
   color: var(--color-pos);
   font-family: $font-content;
@@ -58,8 +92,8 @@ a {
   display: grid;
   max-width: $grid-wrapper-max-width * 1px;
   margin: 0 auto;
-  grid: auto / 300px auto;
-  grid-gap: 30;
+  grid-template-rows: auto auto;
+  grid-template-columns: minmax(auto, 300px) minmax(62%, auto);
   position: relative;
 
   @include gs-breakpoint-loop($grid-gutter) using ($gutter) {
@@ -89,6 +123,13 @@ a {
       top: 0;
       right: 50%;
       bottom: 0;
+
+      @media (prefers-color-scheme: dark) {
+        background: transparent;
+        border: 5px solid var(--color-pos);
+        border-right: 0;
+        z-index: 1;
+      }
     }
 
     &:hover,
@@ -116,88 +157,16 @@ a {
         bottom: 0;
         left: 0;
         border: 5px solid var(--color-pos);
+        border-left-color: transparent;
+        border-bottom-color: transparent;
         border-radius: 50%;
         z-index: 1;
+        transform: rotate(45deg);
       }
     }
 
     img {
       @extend %sr-only;
-    }
-  }
-}
-
-main {
-  grid-area: 2/2/3/4;
-  position: relative;
-
-  &::before {
-    content: '';
-    display: block;
-    height: gs-spacer(1.25);
-    border-top: gs-spacer(0.5) solid $color-major;
-    position: absolute;
-    bottom: gs-spacer(0.5);
-    left: gs-spacer(0.5);
-    right: gs-spacer(0.5);
-  }
-
-  .main__container {
-    display: block;
-    padding-top: gs-spacer(2);
-    padding-bottom: gs-spacer(3.5);
-    background: var(--color-neg--2);
-    border-radius: gs-spacer(1.5) gs-spacer(1.5) 0 0;
-    box-shadow: var(--shadow);
-    position: relative;
-    // overflow: hidden;
-
-    @include gs-breakpoint-loop($grid-gutter) using ($gutter) {
-      padding-left: $gutter;
-      padding-right: $gutter;
-    }
-
-    h1 {
-      @extend %type-article-title;
-      max-width: 26rem;
-      margin-bottom: gs-spacer(1.75);
-      position: relative;
-
-      &::after {
-        content: "";
-        color: $color-major;
-        display: block;
-        width: 100vw;
-        border-bottom: 3px solid $color-major;
-        position: absolute;
-        bottom: gs-spacer(-0.5);
-      }
-    }
-
-    p {
-      max-width: 32rem;
-    }
-
-    figure {
-      max-width: 32rem;
-      margin: gs-spacer(0.75) 0 gs-spacer(0.75);
-
-      img {
-        border-radius: gs-spacer(0.25);
-        box-shadow: var(--shadow--2);
-
-        @include gs-breakpoint-loop($grid-gutter) using ($gutter) {
-          $offset: $gutter * 2;
-
-          max-width: calc(100% + #{$offset});
-          margin-left: -$offset;
-        }
-      }
-
-      figcaption {
-        @extend %type-article-figcaption;
-        text-align: right;
-      }
     }
   }
 }
